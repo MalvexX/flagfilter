@@ -1,0 +1,66 @@
+* {box-sizing: border-box}
+
+.filterbutton {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.filterbutton:hover {
+  background-color: #ddd;
+}
+
+.filterbutton.active {
+  background-color: #666;
+  color: white;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: flex-start;
+    align-items: flex-start;*/
+}
+/*
+.flag {
+    width: 50%;
+} */
+
+/* Container needed to position the overlay. Adjust the width as needed 
+.flag {
+  position: relative;
+  width: 80%;
+  max-width: 200px;
+}*/
+
+/* Make the image to responsive 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}*/
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title  
+.flag:hover .overlay {
+  opacity: 1;
+}*/
+
