@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+
+Version 0.12
+
+-->
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +12,21 @@
   </head>
   <body>
   
-    <h2>Flagfilter</h2>
-    
-    <div id="myButtons">
-        <button class="all filterbutton active" onclick="filterSelection('all')"> Show all</button>
-        <button class="cross filterbutton"        onclick="filterSelection('cross')"> Cross</button>
-        <button class="vertical filterbutton"        onclick="filterSelection('vertical')"> Vertical lines</button>
-        <button class="horizontal filterbutton"        onclick="filterSelection('horizontal')"> Horizontal lines</button>
-        <button class="star filterbutton"        onclick="filterSelection('star')"> Star</button>
-        <button class="british filterbutton"        onclick="filterSelection('british')"> British</button>
-    </div>
+    <h1>Flagfilter</h1>
 
-    <input type="text" id="myInput" onkeyup="textFilter()" placeholder="Search for a name, color or pattern" title="Search for a name, color or pattern">
+	<div class="controls">
+		<div id="myButtons">
+			<button class="all filterbutton active" onclick="filterSelection('all')"> Show all</button>
+			<button class="cross filterbutton" onclick="filterSelection('cross')"> Cross</button>
+			<button class="vertical filterbutton" onclick="filterSelection('vertical')"> Vertical lines</button>
+			<button class="horizontal filterbutton" onclick="filterSelection('horizontal')"> Horizontal lines</button>
+			<button class="star filterbutton" onclick="filterSelection('star')"> Star</button>
+			<button class="british filterbutton" onclick="filterSelection('british')"> British</button>
+		</div>
+		<div class="textinputfield">
+			<input type="search" id="myInput" onkeyup="textFilter()" placeholder="Search for a name, color or pattern" title="Search for a name, color or pattern" autofocus>
+		</div>
+	</div>
     
     <div class="gallery">
         <div class="flag">
@@ -602,482 +610,509 @@
         </div>
         
         <div class="flag">
-        <img class="image mali green yellow red vertical" src=flags-normal\ml.png>
-        <div class="overlay">Mali</div>
+			<img class="image mali green yellow red vertical" src=flags-normal\ml.png>
+			<div class="overlay">Mali</div>
         </div>
         
         <div class="flag">
-        <img class="image myanmar red blue white stars leaf" src=flags-normal\mm.png>
-        <div class="overlay">Myanmar</div>
+			<img class="image myanmar red blue white stars leaf" src=flags-normal\mm.png>
+			<div class="overlay">Myanmar</div>
         </div>
         
         <div class="flag">
-        <img class="image mongolia red blue yellow vertical circle" src=flags-normal\mn.png>
-        <div class="overlay">Mongolia</div>
+			<img class="image mongolia red blue yellow vertical circle" src=flags-normal\mn.png>
+			<div class="overlay">Mongolia</div>
         </div>
         
         <div class="flag">
-        <img class="image mauritania green yellow star moon" src=flags-normal\mr.png>
-        <div class="overlay">Mauritania</div>
+			<img class="image mauritania green yellow star moon" src=flags-normal\mr.png>
+			<div class="overlay">Mauritania</div>
         </div>
         
         <div class="flag">
-        <img class="image malta red white vertical cross animal text" src=flags-normal\mt.png>
-        <div class="overlay">Malta</div>
+			<img class="image malta red white vertical cross animal text" src=flags-normal\mt.png>
+			<div class="overlay">Malta</div>
         </div>
         
         <div class="flag">
-        <img class="image mauritius red blue yellow green horizontal" src=flags-normal\mu.png>
-        <div class="overlay">Mauritius</div>
+			<img class="image mauritius red blue yellow green horizontal" src=flags-normal\mu.png>
+			<div class="overlay">Mauritius</div>
         </div>
         
         <div class="flag">
-        <img class="image maldives red green white moon" src=flags-normal\mv.png>
-        <div class="overlay">Maldives</div>
+			<img class="image maldives red green white moon" src=flags-normal\mv.png>
+			<div class="overlay">Maldives</div>
         </div>
         
         <div class="flag">
-        <img class="image malawi black red green horizontal sun" src=flags-normal\mw.png>
-        <div class="overlay">Malawi</div>
+			<img class="image malawi black red green horizontal sun" src=flags-normal\mw.png>
+			<div class="overlay">Malawi</div>
         </div>
         
         <div class="flag">
-        <img class="image mexico green white red vertical bird animal" src=flags-normal\mx.png>
-        <div class="overlay">Mexico</div>
+			<img class="image mexico green white red vertical bird animal" src=flags-normal\mx.png>
+			<div class="overlay">Mexico</div>
         </div>
         
         <div class="flag">
-        <img class="image malaysia blue red white yellow horizontal moon star" src=flags-normal\my.png>
-        <div class="overlay">Malaysia</div>
+			<img class="image malaysia blue red white yellow horizontal moon star" src=flags-normal\my.png>
+			<div class="overlay">Malaysia</div>
         </div>
         
         <div class="flag">
-        <img class="image mozambique green white black yellow red horizontal star" src=flags-normal\mz.png>
-        <div class="overlay">Mozambique</div>
+			<img class="image mozambique green white black yellow red horizontal star" src=flags-normal\mz.png>
+			<div class="overlay">Mozambique</div>
         </div>
         
         <div class="flag">
-        <img class="image namibia blue white red green yellow sun circle" src=flags-normal\na.png>
-        <div class="overlay">Namibia</div>
+			<img class="image namibia blue white red green yellow sun circle" src=flags-normal\na.png>
+			<div class="overlay">Namibia</div>
         </div>
         
         <div class="flag">
-        <img class="image niger orange white green horizontal circle" src=flags-normal\ne.png>
-        <div class="overlay">Niger</div>
+			<img class="image niger orange white green horizontal circle" src=flags-normal\ne.png>
+			<div class="overlay">Niger</div>
         </div>
         
         <div class="flag">
-        <img class="image nigeria green white vertical" src=flags-normal\ng.png>
-        <div class="overlay">Nigeria</div>
+			<img class="image nigeria green white vertical" src=flags-normal\ng.png>
+			<div class="overlay">Nigeria</div>
         </div>
         
         <div class="flag">
-        <img class="image nicaragua blue white horizontal text" src=flags-normal\ni.png>
-        <div class="overlay">Nicaragua</div>
+			<img class="image nicaragua blue white horizontal text" src=flags-normal\ni.png>
+			<div class="overlay">Nicaragua</div>
         </div>
         
         <div class="flag">
-        <img class="image netherlands red white blue horizontal" src=flags-normal\nl.png>
-        <div class="overlay">Netherlands</div>
+			<img class="image netherlands red white blue horizontal" src=flags-normal\nl.png>
+			<div class="overlay">Netherlands</div>
         </div>
         
         <div class="flag">
-        <img class="image norway blue red white cross" src=flags-normal\no.png>
-        <div class="overlay">Norway</div>
+			<img class="image norway blue red white cross" src=flags-normal\no.png>
+			<div class="overlay">Norway</div>
         </div>
         
         <div class="flag">
-        <img class="image nepal red blue white star" src=flags-normal\np.png>
-        <div class="overlay">Nepal</div>
+			<img class="image nepal red blue white star" src=flags-normal\np.png>
+			<div class="overlay">Nepal</div>
         </div>
         
         <div class="flag">
-        <img class="image nauru blue yellow white horizontal star" src=flags-normal\nr.png>
-        <div class="overlay">Nauru</div>
+			<img class="image nauru blue yellow white horizontal star" src=flags-normal\nr.png>
+			<div class="overlay">Nauru</div>
         </div>
         
         <div class="flag">
-        <img class="image new zealand blue white red british stars" src=flags-normal\nz.png>
-        <div class="overlay">New Zealand</div>
+			<img class="image new zealand blue white red british stars" src=flags-normal\nz.png>
+			<div class="overlay">New Zealand</div>
         </div>
         
         <div class="flag">
-        <img class="image oman red white green horizontal" src=flags-normal\om.png>
-        <div class="overlay">Oman</div>
+			<img class="image oman red white green horizontal" src=flags-normal\om.png>
+			<div class="overlay">Oman</div>
         </div>
         
         <div class="flag">
-        <img class="image panama white red blue horizontal vertical stars" src=flags-normal\pa.png>
-        <div class="overlay">Panama</div>
+			<img class="image panama white red blue horizontal vertical stars" src=flags-normal\pa.png>
+			<div class="overlay">Panama</div>
         </div>
         
         <div class="flag">
-        <img class="image peru red white vertical" src=flags-normal\pe.png>
-        <div class="overlay">Peru</div>
+			<img class="image peru red white vertical" src=flags-normal\pe.png>
+			<div class="overlay">Peru</div>
         </div>
         
         <div class="flag">
-        <img class="image papua new guinea red black yellow white stars bird animal " src=flags-normal\pg.png>
-        <div class="overlay">Papua New Guinea</div>
+			<img class="image papua new guinea red black yellow white stars bird animal " src=flags-normal\pg.png>
+			<div class="overlay">Papua New Guinea</div>
         </div>
         
         <div class="flag">
-        <img class="image philippines blue red white yellow horizontal circle sun stars" src=flags-normal\ph.png>
-        <div class="overlay">Philippines</div>
+			<img class="image philippines blue red white yellow horizontal circle sun stars" src=flags-normal\ph.png>
+			<div class="overlay">Philippines</div>
         </div>
         
         <div class="flag">
-        <img class="image pakistan green white vertical moon star" src=flags-normal\pk.png>
-        <div class="overlay">Pakistan</div>
+			<img class="image pakistan green white vertical moon star" src=flags-normal\pk.png>
+			<div class="overlay">Pakistan</div>
         </div>
         
         <div class="flag">
-        <img class="image poland white red horizontal" src=flags-normal\pl.png>
-        <div class="overlay">Poland</div>
+			<img class="image poland white red horizontal" src=flags-normal\pl.png>
+			<div class="overlay">Poland</div>
         </div>
         
         <div class="flag">
-        <img class="image portugal green red vertical circle" src=flags-normal\pt.png>
-        <div class="overlay">Portugal</div>
+			<img class="image portugal green red vertical circle" src=flags-normal\pt.png>
+			<div class="overlay">Portugal</div>
         </div>
         
         <div class="flag">
-        <img class="image palau blue yellow circle" src=flags-normal\pw.png>
-        <div class="overlay">Palau</div>
+			<img class="image palau blue yellow circle" src=flags-normal\pw.png>
+			<div class="overlay">Palau</div>
         </div>
         
         <div class="flag">
-        <img class="image paraguay red white blue horizontal circle star leaf text" src=flags-normal\py.png>
-        <div class="overlay">Paraguay</div>
+			<img class="image paraguay red white blue horizontal circle star leaf text" src=flags-normal\py.png>
+			<div class="overlay">Paraguay</div>
         </div>
         
         <div class="flag">
-        <img class="image qatar white maroon" src=flags-normal\qa.png>
-        <div class="overlay">Qatar</div>
+			<img class="image qatar white maroon" src=flags-normal\qa.png>
+			<div class="overlay">Qatar</div>
         </div>
         
         <div class="flag">
-        <img class="image romania blue yellow red vertical" src=flags-normal\ro.png>
-        <div class="overlay">Romania</div>
+			<img class="image romania blue yellow red vertical" src=flags-normal\ro.png>
+			<div class="overlay">Romania</div>
         </div>
         
         <div class="flag">
-        <img class="image serbia red blue white horizontal bird animal" src=flags-normal\rs.png>
-        <div class="overlay">Serbia</div>
+			<img class="image serbia red blue white horizontal bird animal" src=flags-normal\rs.png>
+			<div class="overlay">Serbia</div>
         </div>
         
         <div class="flag">
-        <img class="image russia white blue red horizontal" src=flags-normal\ru.png>
-        <div class="overlay">Russia</div>
+			<img class="image russia white blue red horizontal" src=flags-normal\ru.png>
+			<div class="overlay">Russia</div>
         </div>
         
         <div class="flag">
-        <img class="image rwanda blue yellow green horizontal sun circle" src=flags-normal\rw.png>
-        <div class="overlay">Rwanda</div>
+			<img class="image rwanda blue yellow green horizontal sun circle" src=flags-normal\rw.png>
+			<div class="overlay">Rwanda</div>
         </div>
         
         <div class="flag">
-        <img class="image saudi arabia green white text" src=flags-normal\sa.png>
-        <div class="overlay">Saudi Arabia</div>
+			<img class="image saudi arabia green white text" src=flags-normal\sa.png>
+			<div class="overlay">Saudi Arabia</div>
         </div>
         
         <div class="flag">
-        <img class="image solomon islands blue yellow green white stars" src=flags-normal\sb.png>
-        <div class="overlay">Solomon Islands</div>
+			<img class="image solomon islands blue yellow green white stars" src=flags-normal\sb.png>
+			<div class="overlay">Solomon Islands</div>
         </div>
         
         <div class="flag">
-        <img class="image seychelles blue yellow red white green" src=flags-normal\sc.png>
-        <div class="overlay">Seychelles</div>
+			<img class="image seychelles blue yellow red white green" src=flags-normal\sc.png>
+			<div class="overlay">Seychelles</div>
         </div>
         
         <div class="flag">
-        <img class="image sudan red white black green horizontal" src=flags-normal\sd.png>
-        <div class="overlay">Sudan</div>
+			<img class="image sudan red white black green horizontal" src=flags-normal\sd.png>
+			<div class="overlay">Sudan</div>
         </div>
         
         <div class="flag">
-        <img class="image sweden blue yellow cross" src=flags-normal\se.png>
-        <div class="overlay">Sweden</div>
+			<img class="image sweden blue yellow cross" src=flags-normal\se.png>
+			<div class="overlay">Sweden</div>
         </div>
         
         <div class="flag">
-        <img class="image singapore red white horizontal moon stars" src=flags-normal\sg.png>
-        <div class="overlay">Singapore</div>
+			<img class="image singapore red white horizontal moon stars" src=flags-normal\sg.png>
+			<div class="overlay">Singapore</div>
         </div>
         
         <div class="flag">
-        <img class="image slovenia white blue red horizontal stars" src=flags-normal\si.png>
-        <div class="overlay">Slovenia</div>
+			<img class="image slovenia white blue red horizontal stars" src=flags-normal\si.png>
+			<div class="overlay">Slovenia</div>
         </div>
         
         <div class="flag">
-        <img class="image slovakia white blue red horizontal cross" src=flags-normal\sk.png>
-        <div class="overlay">Slovakia</div>
+			<img class="image slovakia white blue red horizontal cross" src=flags-normal\sk.png>
+			<div class="overlay">Slovakia</div>
         </div>
         
         <div class="flag">
-        <img class="image sierra leone green white blue horizontal" src=flags-normal\sl.png>
-        <div class="overlay">Sierra Leone</div>
+			<img class="image sierra leone green white blue horizontal" src=flags-normal\sl.png>
+			<div class="overlay">Sierra Leone</div>
         </div>
         
         <div class="flag">
-        <img class="image san marino white blue horizontal leaf text" src=flags-normal\sm.png>
-        <div class="overlay">San Marino</div>
+			<img class="image san marino white blue horizontal leaf text" src=flags-normal\sm.png>
+			<div class="overlay">San Marino</div>
         </div>
         
         <div class="flag">
-        <img class="image senegal green yellow red vertical star" src=flags-normal\sn.png>
-        <div class="overlay">Senegal</div>
+			<img class="image senegal green yellow red vertical star" src=flags-normal\sn.png>
+			<div class="overlay">Senegal</div>
         </div>
         
         <div class="flag">
-        <img class="image somalia blue white star" src=flags-normal\so.png>
-        <div class="overlay">Somalia</div>
+			<img class="image somalia blue white star" src=flags-normal\so.png>
+			<div class="overlay">Somalia</div>
         </div>
         
         <div class="flag">
-        <img class="image suriname green white red yellow horizontal star" src=flags-normal\sr.png>
-        <div class="overlay">Suriname</div>
+			<img class="image suriname green white red yellow horizontal star" src=flags-normal\sr.png>
+			<div class="overlay">Suriname</div>
         </div>
         
         <div class="flag">
-        <img class="image sao tome principe green yellow red black horizontal star" src=flags-normal\st.png>
-        <div class="overlay">São Tomé and Príncipe</div>
+			<img class="image sao tome principe green yellow red black horizontal star" src=flags-normal\st.png>
+			<div class="overlay">São Tomé and Príncipe</div>
         </div>
         
         <div class="flag">
-        <img class="image el salvador blue white horizontal leaf text" src=flags-normal\sv.png>
-        <div class="overlay">El Salvador</div>
+			<img class="image el salvador blue white horizontal leaf text" src=flags-normal\sv.png>
+			<div class="overlay">El Salvador</div>
         </div>
         
         <div class="flag">
-        <img class="image syria red white blue green horizontal stars" src=flags-normal\sy.png>
-        <div class="overlay">Syria</div>
+			<img class="image syria red white blue green horizontal stars" src=flags-normal\sy.png>
+			<div class="overlay">Syria</div>
         </div>
         
         <div class="flag">
-        <img class="image eswatini swaziland blue yellow red white black horizontal" src=flags-normal\sz.png>
-        <div class="overlay">Eswatini</div>
+			<img class="image eswatini swaziland blue yellow red white black horizontal" src=flags-normal\sz.png>
+			<div class="overlay">Eswatini</div>
         </div>
         
         <div class="flag">
-        <img class="image tchad blue yellow red vertical" src=flags-normal\td.png>
-        <div class="overlay">Tchad</div>
+			<img class="image tchad blue yellow red vertical" src=flags-normal\td.png>
+			<div class="overlay">Tchad</div>
         </div>
         
         <div class="flag">
-        <img class="image togo green yellow red white horizontal star" src=flags-normal\tg.png>
-        <div class="overlay">Togo</div>
+			<img class="image togo green yellow red white horizontal star" src=flags-normal\tg.png>
+			<div class="overlay">Togo</div>
         </div>
         
         <div class="flag">
-        <img class="image thailand red white blue horizontal" src=flags-normal\th.png>
-        <div class="overlay">Thailand</div>
+			<img class="image thailand red white blue horizontal" src=flags-normal\th.png>
+			<div class="overlay">Thailand</div>
         </div>
         
         <div class="flag">
-        <img class="image tajikistan red white green horizontal stars" src=flags-normal\tj.png>
-        <div class="overlay">Tajikistan</div>
+			<img class="image tajikistan red white green horizontal stars" src=flags-normal\tj.png>
+			<div class="overlay">Tajikistan</div>
         </div>
         
         <div class="flag">
-        <img class="image timor-leste east timor red yellow black white star" src=flags-normal\tl.png>
-        <div class="overlay">Timor-Leste (East Timor)</div>
+			<img class="image timor-leste east timor red yellow black white star" src=flags-normal\tl.png>
+			<div class="overlay">Timor-Leste (East Timor)</div>
         </div>
         
         <div class="flag">
-        <img class="image turkmenistan green red vertical moon stars" src=flags-normal\tm.png>
-        <div class="overlay">Turkmenistan</div>
+			<img class="image turkmenistan green red vertical moon stars" src=flags-normal\tm.png>
+			<div class="overlay">Turkmenistan</div>
         </div>
         
         <div class="flag">
-        <img class="image tunisia red white circle moon star" src=flags-normal\tn.png>
-        <div class="overlay">Tunisia</div>
+			<img class="image tunisia red white circle moon star" src=flags-normal\tn.png>
+			<div class="overlay">Tunisia</div>
         </div>
         
         <div class="flag">
-        <img class="image tonga red white cross" src=flags-normal\to.png>
-        <div class="overlay">Tonga</div>
+			<img class="image tonga red white cross" src=flags-normal\to.png>
+			<div class="overlay">Tonga</div>
         </div>
         
         <div class="flag">
-        <img class="image turkey red white moon star" src=flags-normal\tr.png>
-        <div class="overlay">Turkey</div>
+			<img class="image turkey red white moon star" src=flags-normal\tr.png>
+			<div class="overlay">Turkey</div>
         </div>
         
         <div class="flag">
-        <img class="image trinidad tobago red white black" src=flags-normal\tt.png>
-        <div class="overlay">Trinidad and Tobago</div>
+			<img class="image trinidad tobago red white black" src=flags-normal\tt.png>
+			<div class="overlay">Trinidad and Tobago</div>
         </div>
         
         <div class="flag">
-        <img class="image tuvalu blue red white yellow british stars" src=flags-normal\tv.png>
-        <div class="overlay">Tuvalu</div>
+			<img class="image tuvalu blue red white yellow british stars" src=flags-normal\tv.png>
+			<div class="overlay">Tuvalu</div>
         </div>
         
         <div class="flag">
-        <img class="image taiwan red blue white circle sun" src=flags-normal\tw.png>
-        <div class="overlay">Taiwan</div>
+			<img class="image taiwan red blue white circle sun" src=flags-normal\tw.png>
+			<div class="overlay">Taiwan</div>
         </div>
         
         <div class="flag">
-        <img class="image tanzania green yellow black blue" src=flags-normal\tz.png>
-        <div class="overlay">Tanzania</div>
+			<img class="image tanzania green yellow black blue" src=flags-normal\tz.png>
+			<div class="overlay">Tanzania</div>
         </div>
         
         <div class="flag">
-        <img class="image ukraine blue yellow horizontal" src=flags-normal\ua.png>
-        <div class="overlay">Ukraine</div>
+			<img class="image ukraine blue yellow horizontal" src=flags-normal\ua.png>
+			<div class="overlay">Ukraine</div>
         </div>
         
         <div class="flag">
-        <img class="image uganda black yellow orange horizontal circle bird animal" src=flags-normal\ug.png>
-        <div class="overlay">Uganda</div>
+			<img class="image uganda black yellow orange horizontal circle bird animal" src=flags-normal\ug.png>
+			<div class="overlay">Uganda</div>
         </div>
         
         <div class="flag">
-        <img class="image usa united states america red white blue horizontal stars" src=flags-normal\us.png>
-        <div class="overlay">United States</div>
+			<img class="image usa united states america red white blue horizontal stars" src=flags-normal\us.png>
+			<div class="overlay">United States</div>
         </div>
         
         <div class="flag">
-        <img class="image uruguay white blue horizontal sun" src=flags-normal\uy.png>
-        <div class="overlay">Uruguay</div>
+			<img class="image uruguay white blue horizontal sun" src=flags-normal\uy.png>
+			<div class="overlay">Uruguay</div>
         </div>
         
         <div class="flag">
-        <img class="image uzbekistan blue white green red horizontal moon stars" src=flags-normal\uz.png>
-        <div class="overlay">Uzbekistan</div>
+			<img class="image uzbekistan blue white green red horizontal moon stars" src=flags-normal\uz.png>
+			<div class="overlay">Uzbekistan</div>
         </div>
         
         <div class="flag">
-        <img class="image vatican city yellow white vertical" src=flags-normal\va.png>
-        <div class="overlay">Vatican City</div>
+			<img class="image vatican city yellow white vertical" src=flags-normal\va.png>
+			<div class="overlay">Vatican City</div>
         </div>
         
         <div class="flag">
-        <img class="image saint vincent grenadines blue yellow green vertical" src=flags-normal\vc.png>
-        <div class="overlay">Saint Vincent and the Grenadines</div>
+			<img class="image saint vincent grenadines blue yellow green vertical" src=flags-normal\vc.png>
+			<div class="overlay">Saint Vincent and the Grenadines</div>
         </div>
         
         <div class="flag">
-        <img class="image venezuela yellow blue red horizontal stars" src=flags-normal\ve.png>
-        <div class="overlay">Venezuela</div>
+			<img class="image venezuela yellow blue red horizontal stars" src=flags-normal\ve.png>
+			<div class="overlay">Venezuela</div>
         </div>
         
         <div class="flag">
-        <img class="image vietnam red yellow star" src=flags-normal\vn.png>
-        <div class="overlay">Vietnam</div>
+			<img class="image vietnam red yellow star" src=flags-normal\vn.png>
+			<div class="overlay">Vietnam</div>
         </div>
         
         <div class="flag">
-        <img class="image vanuatu red green yellow black horizontal" src=flags-normal\vu.png>
-        <div class="overlay">Vanuatu</div>
+			<img class="image vanuatu red green yellow black horizontal" src=flags-normal\vu.png>
+			<div class="overlay">Vanuatu</div>
         </div>
         
         <div class="flag">
-        <img class="image samoa red blue white stars" src=flags-normal\ws.png>
-        <div class="overlay">Samoa</div>
+			<img class="image samoa red blue white stars" src=flags-normal\ws.png>
+			<div class="overlay">Samoa</div>
         </div>
         
         <div class="flag">
-        <img class="image yemen red white black horizontal" src=flags-normal\ye.png>
-        <div class="overlay">Yemen</div>
+			<img class="image yemen red white black horizontal" src=flags-normal\ye.png>
+			<div class="overlay">Yemen</div>
         </div>
         
         <div class="flag">
-        <img class="image south africa red gren blue white yellow black horizontal" src=flags-normal\za.png>
-        <div class="overlay">South Africa</div>
+			<img class="image south africa red gren blue white yellow black horizontal" src=flags-normal\za.png>
+			<div class="overlay">South Africa</div>
         </div>
         
         <div class="flag">
-        <img class="image zambia gren red black orange bird animal" src=flags-normal\zm.png>
-        <div class="overlay">Zambia</div>
+			<img class="image zambia gren red black orange bird animal" src=flags-normal\zm.png>
+			<div class="overlay">Zambia</div>
         </div>
         
         <div class="flag">
-        <img class="image zimbabwe green yellow red black white horizontal star bird animal" src=flags-normal\zw.png>
-        <div class="overlay">Zimbabwe</div>
+			<img class="image zimbabwe green yellow red black white horizontal star bird animal" src=flags-normal\zw.png>
+			<div class="overlay">Zimbabwe</div>
         </div>
 
       </div>
       
     <script>
-//        filterSelection("all")
+		/* Filter by buttons */
         function filterSelection(input) {
-            document.getElementById("myInput").value = "";
-            var images, i, k, textconv;
-            images = document.getElementsByClassName("image");
+            document.getElementById("myInput").value = "";	//clear text search field
+            var image, textconv, flags;
+			flags = document.getElementsByClassName("flag");
+
             if (input == "all") {
-                for (i = 0; i < images.length; i++) {
-                    images[i].style.display = "";
+                for (var i = 0; i < flags.length; i++) {
+                    flags[i].style.display = "";
                 }
             } else {
-                for (i = 0; i < images.length; i++) {
-                    for (k = 0; k < images[i].classList.length; k++) {
-                        textconv = images[i].classList[k].toLowerCase();
+                for (var i = 0; i < flags.length; i++) {
+					image = flags[i].getElementsByClassName("image");
+                    for (var k = 0; k < image[0].classList.length; k++) {
+                        textconv = image[0].classList[k].toLowerCase();
                         var textmatch = textconv.indexOf(input);
                         if (textmatch !== -1) {
-                            images[i].style.display = "";
+                            flags[i].style.display = "";
                             break;
                         } else {
-                            images[i].style.display = "none";
+                            flags[i].style.display = "none";
                         }
                     }
                 }
             }
         }
-        
-    
-    
-        function textFilter() {
-            var rawinput,input,gallery,match,images,i,k,textconv;
-        
-            rawinput = document.getElementById("myInput");
-            input = rawinput.value.toLowerCase();
-            console.log("Input: " + input);
-        
-            //gallery = document.getElementById("gallery");
-            images = document.getElementsByClassName("image");            
-            console.log("Flags in list: " + images.length);
-            
-            for (i = 0; i < images.length; i++) {
-                for (k = 0; k < images[i].classList.length; k++) {
-                    textconv = images[i].classList[k].toLowerCase();
-//                    console.log("textconv: " + textconv);
-//                    console.log("Comparing " + textconv + " and " + input);
-                    var textmatch = textconv.indexOf(input);
-//                    console.log("Textmatch: " + textmatch);
-                    if (textmatch !== -1) {
-                        console.log("Matching " + input + " with " + textconv);
-                        images[i].style.display = "";
-                        break;
-                    } else {
-                        images[i].style.display = "none";
+        /* backup filterSelection
+        function filterSelection(input) {
+            document.getElementById("myInput").value = "";	//clear text search field
+            var image, i, k, textconv, flags;
+			flags = document.getElementsByClassName("flag");
+
+            if (input == "all") {
+                for (i = 0; i < flags.length; i++) {
+                    flags[i].style.display = "";
+                }
+            } else {
+                for (i = 0; i < flags.length; i++) {
+					image = flags[i].getElementsByClassName("image");
+                    for (k = 0; k < image[0].classList.length; k++) {
+                        textconv = image[0].classList[k].toLowerCase();
+                        var textmatch = textconv.indexOf(input);
+                        if (textmatch !== -1) {
+                            flags[i].style.display = "";
+                            break;
+                        } else {
+                            flags[i].style.display = "none";
+                        }
                     }
                 }
             }
-
-/*  This works but not until perfect match
-
-            images = gallery.getElementsByClassName("image");
-                for (i = 0; i < images.length; i++) {
-                    images[i].style.display = "none";
+        }*/
+		
+		
+    
+		/* Filter by input text field */
+        function textFilter() {
+            var rawinput,input,match,image,flags,textconv;
+        
+            rawinput = document.getElementById("myInput");
+            input = rawinput.value.toLowerCase();
+            flags = document.getElementsByClassName("flag");
+            
+            for (var i = 0; i < flags.length; i++) {
+				image = flags[i].getElementsByClassName("image");
+                for (var k = 0; k < image[0].classList.length; k++) {
+                    textconv = image[0].classList[k].toLowerCase();
+                    var textmatch = textconv.indexOf(input);
+                    if (textmatch !== -1) {
+                        flags[i].style.display = "";
+                        break;
+                    } else {
+                        flags[i].style.display = "none";
+                    }
                 }
-        
-            match = gallery.getElementsByClassName(input);
-            console.log("Match length: " + match.length);
-            console.log(match);
-        
-                for (i = 0; i < match.length; i++) {
-                    match[i].style.display = "";
-                }
-*/
-        
+            }
         }
+		/* backup textFilter
+        function textFilter() {
+            var rawinput,input,match,image,flags,i,k,textconv;
         
-        
+            rawinput = document.getElementById("myInput");
+            input = rawinput.value.toLowerCase();
+            flags = document.getElementsByClassName("flag");
+            
+            for (i = 0; i < flags.length; i++) {
+				image = flags[i].getElementsByClassName("image");
+                for (k = 0; k < image[0].classList.length; k++) {
+                    textconv = image[0].classList[k].toLowerCase();
+                    var textmatch = textconv.indexOf(input);
+                    if (textmatch !== -1) {
+                        flags[i].style.display = "";
+                        break;
+                    } else {
+                        flags[i].style.display = "none";
+                    }
+                }
+            }
+        }*/
+
+        /* Adding class "active" to the button pressed */
         var myButtons = document.getElementById("myButtons");
         var filterbuttons = myButtons.getElementsByClassName("filterbutton");
         for (var i = 0; i < filterbuttons.length; i++) {
