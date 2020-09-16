@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 
-Version 0.13
+Version 0.14
 
 Main color: #44bbbb
 Main font: Telex
@@ -13,15 +13,24 @@ Mobile: 320×50
 -->
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178188847-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-178188847-1');
+		</script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel='stylesheet' type='text/css' href='reset.css'>
 		<link rel='stylesheet' type='text/css' href='style.css'>
 
-		<link rel="icon" type="image/png" href="/favicon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
+		<link rel="icon" type="image/png" href="favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
 		<link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet'>
 	</head>
 	<body>
@@ -1035,19 +1044,18 @@ Mobile: 320×50
 		/* Filter by buttons */
         function filterSelection(input) {
             document.getElementById("myInput").value = "";	//clear text search field
-            var image, textconv, flags;
-			flags = document.getElementsByClassName("flag");
+			let flags = document.getElementsByClassName("flag");
 
             if (input == "all") {
-                for (var i = 0; i < flags.length; i++) {
+                for (let i = 0; i < flags.length; i++) {
                     flags[i].style.display = "";
                 }
             } else {
-                for (var i = 0; i < flags.length; i++) {
-					image = flags[i].getElementsByClassName("image");
-                    for (var k = 0; k < image[0].classList.length; k++) {
-                        textconv = image[0].classList[k].toLowerCase();
-                        var textmatch = textconv.indexOf(input);
+                for (let i = 0; i < flags.length; i++) {
+					let image = flags[i].getElementsByClassName("image");
+                    for (let k = 0; k < image[0].classList.length; k++) {
+                        let textconv = image[0].classList[k].toLowerCase();
+                        let textmatch = textconv.indexOf(input);
                         if (textmatch !== -1) {
                             flags[i].style.display = "";
                             break;
@@ -1058,48 +1066,18 @@ Mobile: 320×50
                 }
             }
         }
-        /* backup filterSelection
-        function filterSelection(input) {
-            document.getElementById("myInput").value = "";	//clear text search field
-            var image, i, k, textconv, flags;
-			flags = document.getElementsByClassName("flag");
-
-            if (input == "all") {
-                for (i = 0; i < flags.length; i++) {
-                    flags[i].style.display = "";
-                }
-            } else {
-                for (i = 0; i < flags.length; i++) {
-					image = flags[i].getElementsByClassName("image");
-                    for (k = 0; k < image[0].classList.length; k++) {
-                        textconv = image[0].classList[k].toLowerCase();
-                        var textmatch = textconv.indexOf(input);
-                        if (textmatch !== -1) {
-                            flags[i].style.display = "";
-                            break;
-                        } else {
-                            flags[i].style.display = "none";
-                        }
-                    }
-                }
-            }
-        }*/
-		
-		
     
 		/* Filter by input text field */
         function textFilter() {
-            var rawinput,input,match,image,flags,textconv;
-        
-            rawinput = document.getElementById("myInput");
-            input = rawinput.value.toLowerCase();
-            flags = document.getElementsByClassName("flag");
-            
-            for (var i = 0; i < flags.length; i++) {
+            let rawinput = document.getElementById("myInput");
+            let input = rawinput.value.toLowerCase();
+            let flags = document.getElementsByClassName("flag");
+
+            for (let i = 0; i < flags.length; i++) {
 				image = flags[i].getElementsByClassName("image");
-                for (var k = 0; k < image[0].classList.length; k++) {
+                for (let k = 0; k < image[0].classList.length; k++) {
                     textconv = image[0].classList[k].toLowerCase();
-                    var textmatch = textconv.indexOf(input);
+                    let textmatch = textconv.indexOf(input);
                     if (textmatch !== -1) {
                         flags[i].style.display = "";
                         break;
@@ -1109,33 +1087,11 @@ Mobile: 320×50
                 }
             }
         }
-		/* backup textFilter
-        function textFilter() {
-            var rawinput,input,match,image,flags,i,k,textconv;
-        
-            rawinput = document.getElementById("myInput");
-            input = rawinput.value.toLowerCase();
-            flags = document.getElementsByClassName("flag");
-            
-            for (i = 0; i < flags.length; i++) {
-				image = flags[i].getElementsByClassName("image");
-                for (k = 0; k < image[0].classList.length; k++) {
-                    textconv = image[0].classList[k].toLowerCase();
-                    var textmatch = textconv.indexOf(input);
-                    if (textmatch !== -1) {
-                        flags[i].style.display = "";
-                        break;
-                    } else {
-                        flags[i].style.display = "none";
-                    }
-                }
-            }
-        }*/
 
         /* Adding class "active" to the button pressed */
         var myButtons = document.getElementById("myButtons");
         var filterbuttons = myButtons.getElementsByClassName("filterbutton");
-        for (var i = 0; i < filterbuttons.length; i++) {
+        for (let i = 0; i < filterbuttons.length; i++) {
             filterbuttons[i].addEventListener("click", function(){
                 var current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
