@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!--
 
-Version 0.15
+Flagfilter.com
+Version 0.16
 
 Main color: #44bbbb
 Main font: Telex
@@ -35,6 +36,7 @@ Mobile: 320×50
 		
 		<title>Flagfilter - Quick and easy keyword search for flags</title>
 		<link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	</head>
 	<body>
 
@@ -63,12 +65,24 @@ Mobile: 320×50
 	<div class="gallery">
 		<div class="flag">
 			<img class="image andorra blue yellow red cows animals text" src=flags_20200913\ad.png>
-			<div class="overlay">Andorra</div>
+			<a class="overlay trigger_popup_fricc">Andorra</a>
+		</div>
+		<div class="hover_bkgr_fricc">
+			<span class="helper"></span>
+			<div>
+				<p>Add any HTML content inside the popup box!</p>
+			</div>
 		</div>
 		
 		<div class="flag">
 			<img class="image united arab emirates red green white black horizontal" src=flags_20200913\ae.png>
-			<div class="overlay">United Arab Emirates</div>
+			<div class="overlay trigger_popup_fricc">United Arab Emirates</div>
+		</div>
+		<div class="hover_bkgr_fricc">
+			<span class="helper"></span>
+			<div>
+				<p>Add any HTML content inside the popup box!</p>
+			</div>
 		</div>
 		
 		<div class="flag">
@@ -528,7 +542,7 @@ Mobile: 320×50
 		
 		<div class="flag">
 			<img class="image south georgia blue white red cross british animals text" src=flags_20200913\gs.png>
-			<div class="overlay">south georgia</div>
+			<div class="overlay">South Georgia</div>
 		</div>
 		
 		<div class="flag">
@@ -1347,40 +1361,34 @@ Mobile: 320×50
 			} else {
 				let buttonpressed = document.getElementsByClassName("filterbutton" + " " + input);
 				document.title = "Flagfilter - " + buttonpressed[0].innerHTML; //set title to search term
-				
-				for (let i = 0; i < flags.length; i++) {
-					let image = flags[i].getElementsByClassName("image");
-					for (let k = 0; k < image[0].classList.length; k++) {
-						let textmatch = image[0].classList[k].toLowerCase().indexOf(input);
-						if (textmatch !== -1) {
-							flags[i].style.display = "";
-							break;
-						} else {
-							flags[i].style.display = "none";
-						}
-					}
-				}
+				classFilter(input);
 			}
 		}
 	
 		/* Filter by input text field */
 		function textFilter() {
+			let current = document.getElementsByClassName("active");
+			if (current.length > 0) {
+				current[0].classList.remove("active");	//clear active button	
+			}
+						
 			let rawinput = document.getElementById("myInput");
 			let input = rawinput.value.toLowerCase();
-			let flags = document.getElementsByClassName("flag");
 			
 			if (input.trim().length > 0) {
 				document.title = "Flagfilter - " + input; //set title to search term
 			} else {
 				document.title = "Flagfilter - Quick and easy keyword search for flags";
 			}
-			
-
+			classFilter(input);
+		}
+		
+		function classFilter(input) {
+			let flags = document.getElementsByClassName("flag");
 			for (let i = 0; i < flags.length; i++) {
 				image = flags[i].getElementsByClassName("image");
 				for (let k = 0; k < image[0].classList.length; k++) {
-					textconv = image[0].classList[k].toLowerCase();
-					let textmatch = textconv.indexOf(input);
+					let textmatch = image[0].classList[k].toLowerCase().indexOf(input);
 					if (textmatch !== -1) {
 						flags[i].style.display = "";
 						break;
@@ -1392,15 +1400,28 @@ Mobile: 320×50
 		}
 
 		/* Adding class "active" to the button pressed */
-		var myButtons = document.getElementById("myButtons");
-		var filterbuttons = myButtons.getElementsByClassName("filterbutton");
+		let myButtons = document.getElementById("myButtons");
+		let filterbuttons = myButtons.getElementsByClassName("filterbutton");
 		for (let i = 0; i < filterbuttons.length; i++) {
 			filterbuttons[i].addEventListener("click", function(){
-				var current = document.getElementsByClassName("active");
-				current[0].className = current[0].className.replace(" active", "");
-				this.className += " active";
+				let current = document.getElementsByClassName("active");
+				if (current.length == 0) {
+					this.className += " active";
+				} else {
+					current[0].classList.remove("active");
+					this.className += " active";
+				}
 			});
 		}
+		
+		$(window).load(function () {
+			$(".trigger_popup_fricc").click(function(){
+				$('.hover_bkgr_fricc').show();
+			});
+			$('.hover_bkgr_fricc').click(function(){
+				$('.hover_bkgr_fricc').hide();
+			});
+		});
 
 	</script>
   </body>
