@@ -2,7 +2,7 @@
 <!--
 
 Flagfilter.com
-Version 0.16
+Version 0.17
 
 Main color: #44bbbb
 Main font: Telex
@@ -46,11 +46,18 @@ Mobile: 320×50
 		<div id="myButtons">
 			<button class="all filterbutton active" onclick="filterSelection('all')">Show all</button>
 			<button class="animal filterbutton" onclick="filterSelection('animal')">Animal</button>
-			<button class="cross filterbutton" onclick="filterSelection('cross')">Cross</button>
+			<!-- <button class="cross filterbutton" onclick="filterSelection('cross')">Cross</button> -->
 			<button class="horizontal filterbutton" onclick="filterSelection('horizontal')">Horizontal lines</button>
 			<button class="vertical filterbutton" onclick="filterSelection('vertical')">Vertical lines</button>
-			<button class="star filterbutton" onclick="filterSelection('star')">Star</button>
-			<button class="british filterbutton" onclick="filterSelection('british')">British</button>
+			<!-- <button class="star filterbutton" onclick="filterSelection('star')">Star</button> -->
+			<!-- <button class="british filterbutton" onclick="filterSelection('british')">British</button> -->
+			<button class="africa filterbutton" onclick="filterSelection('africa')">Africa</button>
+			<button class="asia filterbutton" onclick="filterSelection('asia')">Asia</button>
+			<button class="europe filterbutton" onclick="filterSelection('europe')">Europe</button>
+			<button class="nordic filterbutton" onclick="filterSelection('nordic')">Nordic</button>
+			<button class="northa filterbutton" onclick="filterSelection('northa')">North America</button>
+			<button class="southa filterbutton" onclick="filterSelection('southa')">South America</button>
+			<button class="oceania filterbutton" onclick="filterSelection('oceania')">Oceania</button>
 		</div>
 		<div class="textInputField">
 			<input type="search" id="myInput" onkeyup="textFilter()" placeholder="Search for name, color or pattern" title="Search for name, color or pattern" autofocus>
@@ -66,7 +73,7 @@ Mobile: 320×50
 	
 	<div class="gallery">
 		<div class="flag">
-			<img class="image andorra blue yellow red cows animals text" src=flags_20200913\ad.png>
+			<img class="image andorra blue yellow red cows animals text europe" src=flags_20200913\ad.png>
 			<a class="overlay trigger_popup_fricc">Andorra</a>
 		</div>
 		<div class="hover_bkgr_fricc">
@@ -77,7 +84,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image united arab emirates red green white black horizontal" src=flags_20200913\ae.png>
+			<img class="image united arab emirates red green white black horizontal asia" src=flags_20200913\ae.png>
 			<div class="overlay trigger_popup_fricc">United Arab Emirates</div>
 		</div>
 		<div class="hover_bkgr_fricc">
@@ -88,32 +95,32 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image afghanistan black red green vertical text" src=flags_20200913\af.png>
+			<img class="image afghanistan black red green vertical text asia" src=flags_20200913\af.png>
 			<div class="overlay">Afghanistan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image antigua barbuda red black blue white sun" src=flags_20200913\ag.png>
+			<img class="image antigua barbuda red black blue white sun northa" src=flags_20200913\ag.png>
 			<div class="overlay">Antigua and Barbuda</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image anguilla blue red white orange cross british animals dolphins" src=flags_20200913\ai.png>
+			<img class="image anguilla blue red white orange cross british animals dolphins northa" src=flags_20200913\ai.png>
 			<div class="overlay">Anguilla</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image albania red black bird" src=flags_20200913\al.png>
+			<img class="image albania red black bird europe" src=flags_20200913\al.png>
 			<div class="overlay">Albania</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image armenia red blue orange horizontal" src=flags_20200913\am.png>
+			<img class="image armenia red blue orange horizontal asia" src=flags_20200913\am.png>
 			<div class="overlay">Armenia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image angola red black star" src=flags_20200913\ao.png>
+			<img class="image angola red black star africa" src=flags_20200913\ao.png>
 			<div class="overlay">Angola</div>
 		</div>
 		
@@ -123,122 +130,122 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image argentina blue white horizontal sun" src=flags_20200913\ar.png>
+			<img class="image argentina blue white horizontal sun southa" src=flags_20200913\ar.png>
 			<div class="overlay">Argentina</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image american samoa blue white red bird animal eagle" src=flags_20200913\as.png>
+			<img class="image american samoa blue white red bird animal eagle oceania" src=flags_20200913\as.png>
 			<div class="overlay">American Samoa</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image austria red white horizontal" src=flags_20200913\at.png>
+			<img class="image austria red white horizontal europe" src=flags_20200913\at.png>
 			<div class="overlay">Austria</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image australia blue white red cross british stars" src=flags_20200913\au.png>
+			<img class="image australia blue white red cross british stars oceania" src=flags_20200913\au.png>
 			<div class="overlay">Australia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image aruba blue yellow red white horizontal star" src=flags_20200913\aw.png>
+			<img class="image aruba blue yellow red white horizontal star northa" src=flags_20200913\aw.png>
 			<div class="overlay">Aruba</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image åland islands aland blue yellow red cross" src=flags_20200913\ax.png>
+			<img class="image åland islands aland blue yellow red cross europe nordic" src=flags_20200913\ax.png>
 			<div class="overlay">Åland Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image azerbaijan blue red green horizontal moon star" src=flags_20200913\az.png>
+			<img class="image azerbaijan blue red green horizontal moon star asia" src=flags_20200913\az.png>
 			<div class="overlay">Azerbaijan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bosnia herzegovina blue yellow stars" src=flags_20200913\ba.png>
+			<img class="image bosnia herzegovina blue yellow stars europe" src=flags_20200913\ba.png>
 			<div class="overlay">Bosnia and Herzegovina</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image barbados blue yellow vertical" src=flags_20200913\bb.png>
+			<img class="image barbados blue yellow vertical northa" src=flags_20200913\bb.png>
 			<div class="overlay">Barbados</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bangladesh green red circle" src=flags_20200913\bd.png>
+			<img class="image bangladesh green red circle asia" src=flags_20200913\bd.png>
 			<div class="overlay">Bangladesh</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image belgium black yellow red vertical" src=flags_20200913\be.png>
+			<img class="image belgium black yellow red vertical europe" src=flags_20200913\be.png>
 			<div class="overlay">Belgium</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image burkina faso red green yellow horizontal star" src=flags_20200913\bf.png>
+			<img class="image burkina faso red green yellow horizontal star africa" src=flags_20200913\bf.png>
 			<div class="overlay">Burkina Faso</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bulgaria white green red horizontal" src=flags_20200913\bg.png>
+			<img class="image bulgaria white green red horizontal europe" src=flags_20200913\bg.png>
 			<div class="overlay">Bulgaria</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bahrain white red" src=flags_20200913\bh.png>
+			<img class="image bahrain white red asia" src=flags_20200913\bh.png>
 			<div class="overlay">Bahrain</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image burundi green red white cross stars circle" src=flags_20200913\bi.png>
+			<img class="image burundi green red white cross stars circle africa" src=flags_20200913\bi.png>
 			<div class="overlay">Burundi</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image benin green yellow red horizontal" src=flags_20200913\bj.png>
+			<img class="image benin green yellow red horizontal africa" src=flags_20200913\bj.png>
 			<div class="overlay">Benin</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint barthélemy barthelemy white blue red yellow animals birds text cross star" src=flags_20200913\bl.png>
+			<img class="image saint barthélemy barthelemy white blue red yellow animals birds text cross star northa" src=flags_20200913\bl.png>
 			<div class="overlay">Saint Barthélemy</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bermuda red blue white cross british animal" src=flags_20200913\bm.png>
+			<img class="image bermuda red blue white cross british animal northa" src=flags_20200913\bm.png>
 			<div class="overlay">Bermuda</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image brunei yellow black white red text" src=flags_20200913\bn.png>
+			<img class="image brunei yellow black white red text asia" src=flags_20200913\bn.png>
 			<div class="overlay">Brunei</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bolivia red yellow green horizontal" src=flags_20200913\bo.png>
+			<img class="image bolivia red yellow green horizontal southa" src=flags_20200913\bo.png>
 			<div class="overlay">Bolivia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image caribbean netherlands blue white yellow red black star" src=flags_20200913\bq.png>
+			<img class="image caribbean netherlands blue white yellow red black star northa" src=flags_20200913\bq.png>
 			<div class="overlay">Caribbean Netherlands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image brazil green yellow blue circle text stars" src=flags_20200913\br.png>
+			<img class="image brazil green yellow blue circle text stars southa" src=flags_20200913\br.png>
 			<div class="overlay">Brazil</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bahamas black blue yellow horizontal" src=flags_20200913\bs.png>
+			<img class="image bahamas black blue yellow horizontal northa" src=flags_20200913\bs.png>
 			<div class="overlay">Bahamas</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image bhutan orange white animal dragon" src=flags_20200913\bt.png>
+			<img class="image bhutan orange white animal dragon asia" src=flags_20200913\bt.png>
 			<div class="overlay">Bhutan</div>
 		</div>
 		
@@ -248,297 +255,297 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image botswana blue white black horizontal" src=flags_20200913\bw.png>
+			<img class="image botswana blue white black horizontal africa" src=flags_20200913\bw.png>
 			<div class="overlay">Botswana</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image belarus red green white horizontal" src=flags_20200913\by.png>
+			<img class="image belarus red green white horizontal europe" src=flags_20200913\by.png>
 			<div class="overlay">Belarus</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image belize white red white circle horizontal text leaf" src=flags_20200913\bz.png>
+			<img class="image belize white red white circle horizontal text leaf northa" src=flags_20200913\bz.png>
 			<div class="overlay">Belize</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image canada red white vertical leaf" src=flags_20200913\ca.png>
+			<img class="image canada red white vertical leaf northa" src=flags_20200913\ca.png>
 			<div class="overlay">Canada</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cocos islands keeling islands green yellow stars moon tree circle" src=flags_20200913\cc.png>
+			<img class="image cocos islands keeling islands green yellow stars moon tree circle oceania" src=flags_20200913\cc.png>
 			<div class="overlay">Cocos (Keeling) Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image congo blue yellow red star" src=flags_20200913\cd.png>
+			<img class="image congo blue yellow red star africa" src=flags_20200913\cd.png>
 			<div class="overlay">Democratic Republic of the Congo</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image central africa blue white green yellow red star horizontal" src=flags_20200913\cf.png>
+			<img class="image central africa blue white green yellow red star horizontal africa" src=flags_20200913\cf.png>
 			<div class="overlay">Central African Republic</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image congo brazzaville green yellow red" src=flags_20200913\cg.png>
+			<img class="image congo brazzaville green yellow red africa" src=flags_20200913\cg.png>
 			<div class="overlay">Republic of the Congo</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image switzerland red white cross" src=flags_20200913\ch.png>
+			<img class="image switzerland red white cross europe" src=flags_20200913\ch.png>
 			<div class="overlay">Switzerland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ivory coast orange white green vertical" src=flags_20200913\ci.png>
-			<div class="overlay">Ivory Coast</div>
+			<img class="image côte d'ivoire ivory coast orange white green vertical africa" src=flags_20200913\ci.png>
+			<div class="overlay">Côte d'Ivoire (Ivory Coast)</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cook islands blue white red cross british stars circle" src=flags_20200913\ck.png>
+			<img class="image cook islands blue white red cross british stars circle oceania" src=flags_20200913\ck.png>
 			<div class="overlay">Cook Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image chile red white blue star horizontal" src=flags_20200913\cl.png>
+			<img class="image chile red white blue star horizontal southa" src=flags_20200913\cl.png>
 			<div class="overlay">Chile</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cameroon green red yellow vertical star" src=flags_20200913\cm.png>
+			<img class="image cameroon green red yellow vertical star africa" src=flags_20200913\cm.png>
 			<div class="overlay">Cameroon</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image china red yellow stars" src=flags_20200913\cn.png>
+			<img class="image china red yellow stars asia" src=flags_20200913\cn.png>
 			<div class="overlay">China</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image colombia yellow blue red horizontal" src=flags_20200913\co.png>
+			<img class="image colombia yellow blue red horizontal southa" src=flags_20200913\co.png>
 			<div class="overlay">Colombia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image costa rica blue white red horizontal" src=flags_20200913\cr.png>
+			<img class="image costa rica blue white red horizontal northa" src=flags_20200913\cr.png>
 			<div class="overlay">Costa Rica</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cuba blue white red star horizontal" src=flags_20200913\cu.png>
+			<img class="image cuba blue white red star horizontal northa" src=flags_20200913\cu.png>
 			<div class="overlay">Cuba</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cape verde blue white red yellow horizontal stars" src=flags_20200913\cv.png>
+			<img class="image cape verde blue white red yellow horizontal stars africa" src=flags_20200913\cv.png>
 			<div class="overlay">Cape Verde</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image curaçao curacao blue yellow white stars horizontal" src=flags_20200913\cw.png>
+			<img class="image curaçao curacao blue yellow white stars horizontal northa" src=flags_20200913\cw.png>
 			<div class="overlay">Curaçao</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image christmas island blue green white yellow stars animal bird" src=flags_20200913\cx.png>
+			<img class="image christmas island blue green white yellow stars animal bird map oceania" src=flags_20200913\cx.png>
 			<div class="overlay">Christmas Island</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cyprus white orange green leaf" src=flags_20200913\cy.png>
+			<img class="image cyprus white orange green leaf map europe" src=flags_20200913\cy.png>
 			<div class="overlay">Cyprus</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image czechia white red blue horizontal" src=flags_20200913\cz.png>
+			<img class="image czechia white red blue horizontal europe" src=flags_20200913\cz.png>
 			<div class="overlay">Czechia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image germany black red yellow horizontal" src=flags_20200913\de.png>
+			<img class="image germany black red yellow horizontal europe" src=flags_20200913\de.png>
 			<div class="overlay">Germany</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image djibouti white blue green red horizontal star" src=flags_20200913\dj.png>
+			<img class="image djibouti white blue green red horizontal star africa" src=flags_20200913\dj.png>
 			<div class="overlay">Djibouti</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image denmark red white cross" src=flags_20200913\dk.png>
+			<img class="image denmark red white cross europe nordic" src=flags_20200913\dk.png>
 			<div class="overlay">Denmark</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image dominica green yellow black white red purple stars circle bird animal" src=flags_20200913\dm.png>
+			<img class="image dominica green yellow black white red purple stars circle bird animal northa" src=flags_20200913\dm.png>
 			<div class="overlay">Dominica</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image dominican republic blue red white cross leaf text" src=flags_20200913\do.png>
+			<img class="image dominican republic blue red white cross leaf text northa" src=flags_20200913\do.png>
 			<div class="overlay">Dominican Republic</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image algeria green white red vertical star moon" src=flags_20200913\dz.png>
+			<img class="image algeria green white red vertical star moon africa" src=flags_20200913\dz.png>
 			<div class="overlay">Algeria</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ecuador yellow blue red horizontal leaf bird animal" src=flags_20200913\ec.png>
+			<img class="image ecuador yellow blue red horizontal leaf bird animal southa" src=flags_20200913\ec.png>
 			<div class="overlay">Ecuador</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image estonia blue black white horizontal" src=flags_20200913\ee.png>
+			<img class="image estonia blue black white horizontal europe" src=flags_20200913\ee.png>
 			<div class="overlay">Estonia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image egypt red white black yellow horizontal bird animal text" src=flags_20200913\eg.png>
+			<img class="image egypt red white black yellow horizontal bird animal text africa asia" src=flags_20200913\eg.png>
 			<div class="overlay">Egypt</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image west sahara black white green red horizontal moon star" src=flags_20200913\eh.png>
-			<div class="overlay">West Sahara</div>
+			<img class="image western sahara black white green red horizontal moon star africa" src=flags_20200913\eh.png>
+			<div class="overlay">Western Sahara</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image eritrea green red blue yellow leaf" src=flags_20200913\er.png>
+			<img class="image eritrea green red blue yellow leaf africa" src=flags_20200913\er.png>
 			<div class="overlay">Eritrea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image spain red yellow horizontal animal text" src=flags_20200913\es.png>
+			<img class="image spain red yellow horizontal animal text europe" src=flags_20200913\es.png>
 			<div class="overlay">Spain</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ethiopia green yellow red blue star circle" src=flags_20200913\et.png>
+			<img class="image ethiopia green yellow red blue star circle africa" src=flags_20200913\et.png>
 			<div class="overlay">Ethiopia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image finland blue white cross" src=flags_20200913\fi.png>
+			<img class="image finland blue white cross europe nordic" src=flags_20200913\fi.png>
 			<div class="overlay">Finland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image fiji blue white red cross british bird animals" src=flags_20200913\fj.png>
+			<img class="image fiji blue white red cross british bird animals oceania" src=flags_20200913\fj.png>
 			<div class="overlay">Fiji</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image falkland islands blue white red cross british waves animal sheep text" src=flags_20200913\fk.png>
+			<img class="image falkland islands blue white red cross british waves animal sheep text southa" src=flags_20200913\fk.png>
 			<div class="overlay">Falkland Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image micronesia blue white stars" src=flags_20200913\fm.png>
+			<img class="image micronesia blue white stars oceania" src=flags_20200913\fm.png>
 			<div class="overlay">Micronesia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image faroe islands white red blue cross" src=flags_20200913\fo.png>
+			<img class="image faroe islands white red blue cross europe nordic" src=flags_20200913\fo.png>
 			<div class="overlay">Faroe Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image france blue white red vertical" src=flags_20200913\fr.png>
+			<img class="image france blue white red vertical europe" src=flags_20200913\fr.png>
 			<div class="overlay">France</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image gabon green yellow blue horizontal" src=flags_20200913\ga.png>
+			<img class="image gabon green yellow blue horizontal africa" src=flags_20200913\ga.png>
 			<div class="overlay">Gabon</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image great britain red white blue cross british" src=flags_20200913\gb.png>
-			<div class="overlay">Great Britain</div>
+			<img class="image united kingdom great britain red white blue cross british europe" src=flags_20200913\gb.png>
+			<div class="overlay">United Kingdom</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image england white red cross" src=flags_20200913\gb-eng.png>
+			<img class="image england white red cross europe" src=flags_20200913\gb-eng.png>
 			<div class="overlay">England</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image northern ireland white red cross star" src=flags_20200913\gb-nir.png>
+			<img class="image northern ireland white red cross star europe" src=flags_20200913\gb-nir.png>
 			<div class="overlay">Northern Ireland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image scotland blue white cross" src=flags_20200913\gb-sct.png>
+			<img class="image scotland blue white cross europe" src=flags_20200913\gb-sct.png>
 			<div class="overlay">Scotland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image wales white green red animal dragon" src=flags_20200913\gb-wls.png>
+			<img class="image wales white green red animal dragon europe" src=flags_20200913\gb-wls.png>
 			<div class="overlay">Wales</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image grenada red yellow green stars" src=flags_20200913\gd.png>
+			<img class="image grenada red yellow green stars northa" src=flags_20200913\gd.png>
 			<div class="overlay">Grenada</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image georgia white red cross" src=flags_20200913\ge.png>
+			<img class="image georgia white red cross asia" src=flags_20200913\ge.png>
 			<div class="overlay">Georgia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image french guiana green yellow red star" src=flags_20200913\gf.png>
+			<img class="image french guiana green yellow red star southa" src=flags_20200913\gf.png>
 			<div class="overlay">French Guiana</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guernsey white red yellow cross" src=flags_20200913\gg.png>
+			<img class="image guernsey white red yellow cross europe" src=flags_20200913\gg.png>
 			<div class="overlay">Guernsey</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ghana red yellow green black star horizontal" src=flags_20200913\gh.png>
+			<img class="image ghana red yellow green black star horizontal africa" src=flags_20200913\gh.png>
 			<div class="overlay">Ghana</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image gibraltar white red horizontal" src=flags_20200913\gi.png>
+			<img class="image gibraltar white red horizontal europe" src=flags_20200913\gi.png>
 			<div class="overlay">Gibraltar</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image greenland red white horizontal circle" src=flags_20200913\gl.png>
+			<img class="image greenland red white horizontal circle nordic northa" src=flags_20200913\gl.png>
 			<div class="overlay">Greenland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image gambia red white blue green horizontal" src=flags_20200913\gm.png>
+			<img class="image gambia red white blue green horizontal africa" src=flags_20200913\gm.png>
 			<div class="overlay">Gambia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guinea red yellow green vertical" src=flags_20200913\gn.png>
+			<img class="image guinea red yellow green vertical africa oceania" src=flags_20200913\gn.png>
 			<div class="overlay">Guinea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guadeloupe blue black yellow sun horizontal" src=flags_20200913\gp.png>
+			<img class="image guadeloupe blue black yellow sun horizontal northa" src=flags_20200913\gp.png>
 			<div class="overlay">Guadeloupe</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image equatorial guinea green white red blue stars text leaf" src=flags_20200913\gq.png>
+			<img class="image equatorial guinea green white red blue stars text leaf africa" src=flags_20200913\gq.png>
 			<div class="overlay">Equatorial Guinea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image greece blue white cross horizontal" src=flags_20200913\gr.png>
+			<img class="image greece blue white cross horizontal europe" src=flags_20200913\gr.png>
 			<div class="overlay">Greece</div>
 		</div>
 		
@@ -548,27 +555,27 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image guatemala blue white vertical leaf bird animal text" src=flags_20200913\gt.png>
+			<img class="image guatemala blue white vertical leaf bird animal text northa" src=flags_20200913\gt.png>
 			<div class="overlay">Guatemala</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guinea-bissau yellow green red black star horizontal" src=flags_20200913\gw.png>
+			<img class="image guinea-bissau yellow green red black star horizontal africa" src=flags_20200913\gw.png>
 			<div class="overlay">Guinea-Bissau</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guam blue red tree text" src=flags_20200913\gu.png>
+			<img class="image guam blue red tree text oceania" src=flags_20200913\gu.png>
 			<div class="overlay">Guam</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image guyana green white yellow black red" src=flags_20200913\gy.png>
+			<img class="image guyana green white yellow black red southa" src=flags_20200913\gy.png>
 			<div class="overlay">Guyana</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image hong kong red white stars" src=flags_20200913\hk.png>
+			<img class="image hong kong red white stars asia" src=flags_20200913\hk.png>
 			<div class="overlay">Hong Kong</div>
 		</div>
 		
@@ -578,598 +585,598 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image honduras blue white horizontal stars" src=flags_20200913\hn.png>
+			<img class="image honduras blue white horizontal stars northa" src=flags_20200913\hn.png>
 			<div class="overlay">Honduras</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image croatia red white blue horizontal animals" src=flags_20200913\hr.png>
+			<img class="image croatia red white blue horizontal animals europe" src=flags_20200913\hr.png>
 			<div class="overlay">Croatia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image haiti blue red white horizontal leaf text" src=flags_20200913\ht.png>
+			<img class="image haiti blue red white horizontal leaf text northa" src=flags_20200913\ht.png>
 			<div class="overlay">Haiti</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image hungary red white green horizontal" src=flags_20200913\hu.png>
+			<img class="image hungary red white green horizontal europe" src=flags_20200913\hu.png>
 			<div class="overlay">Hungary</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image indonesia red white horizontal" src=flags_20200913\id.png>
+			<img class="image indonesia red white horizontal asia oceania" src=flags_20200913\id.png>
 			<div class="overlay">Indonesia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ireland green white orange vertical" src=flags_20200913\ie.png>
+			<img class="image ireland green white orange vertical europe" src=flags_20200913\ie.png>
 			<div class="overlay">Ireland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image isreal white blue horizontal star" src=flags_20200913\il.png>
-			<div class="overlay">Isreal</div>
+			<img class="image israel white blue horizontal star asia" src=flags_20200913\il.png>
+			<div class="overlay">Israel</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image isle of man red white yellow stars" src=flags_20200913\im.png>
+			<img class="image isle of man red white yellow stars europe" src=flags_20200913\im.png>
 			<div class="overlay">Isle of Man</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image india orange white green blue horizontal circle" src=flags_20200913\in.png>
+			<img class="image india orange white green blue horizontal circle asia" src=flags_20200913\in.png>
 			<div class="overlay">India</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image british indian ocean territory blue red white cross waves tree" src=flags_20200913\io.png>
+			<img class="image british indian ocean territory blue red white cross waves tree africa" src=flags_20200913\io.png>
 			<div class="overlay">British Indian Ocean Territory</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image iraq red white black green horizontal text" src=flags_20200913\iq.png>
+			<img class="image iraq red white black green horizontal text asia" src=flags_20200913\iq.png>
 			<div class="overlay">Iraq</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image iran green white red horizontal" src=flags_20200913\ir.png>
+			<img class="image iran green white red horizontal asia" src=flags_20200913\ir.png>
 			<div class="overlay">Iran</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image iceland blue red white cross" src=flags_20200913\is.png>
+			<img class="image iceland blue red white cross europe nordic" src=flags_20200913\is.png>
 			<div class="overlay">Iceland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image italy green white red vertical" src=flags_20200913\it.png>
+			<img class="image italy green white red vertical europe" src=flags_20200913\it.png>
 			<div class="overlay">Italy</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image jersey white red cross animals" src=flags_20200913\je.png>
+			<img class="image jersey white red cross animals europe" src=flags_20200913\je.png>
 			<div class="overlay">Jersey</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image jamaica green yellow black cross" src=flags_20200913\jm.png>
+			<img class="image jamaica green yellow black cross northa" src=flags_20200913\jm.png>
 			<div class="overlay">Jamaica</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image jordania black white green red horizontal star" src=flags_20200913\jo.png>
-			<div class="overlay">Jordania</div>
+			<img class="image jordan black white green red horizontal star" src=flags_20200913\jo.png>
+			<div class="overlay">Jordan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image japan white red circle" src=flags_20200913\jp.png>
+			<img class="image japan white red circle asia" src=flags_20200913\jp.png>
 			<div class="overlay">Japan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kenya black white red green horizontal" src=flags_20200913\ke.png>
+			<img class="image kenya black white red green horizontal africa" src=flags_20200913\ke.png>
 			<div class="overlay">Kenya</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kyrgyzstan red yellow sun circle" src=flags_20200913\kg.png>
+			<img class="image kyrgyzstan red yellow sun circle asia" src=flags_20200913\kg.png>
 			<div class="overlay">Kyrgyzstan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cambodia blue red white horizontal" src=flags_20200913\kh.png>
+			<img class="image cambodia blue red white horizontal asia" src=flags_20200913\kh.png>
 			<div class="overlay">Cambodia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kiribati red white blue yellow sun bird animal waves" src=flags_20200913\ki.png>
+			<img class="image kiribati red white blue yellow sun bird animal waves oceania" src=flags_20200913\ki.png>
 			<div class="overlay">Kiribati</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image comoros green yellow white red blue horizontal moon stars" src=flags_20200913\km.png>
+			<img class="image comoros green yellow white red blue horizontal moon stars africa" src=flags_20200913\km.png>
 			<div class="overlay">Comoros</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint kitts nevis green yellow black white red stars" src=flags_20200913\kn.png>
+			<img class="image saint kitts nevis green yellow black white red stars northa" src=flags_20200913\kn.png>
 			<div class="overlay">Saint Kitts and Nevis</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image north korea blue white red horizontal star circle" src=flags_20200913\kp.png>
+			<img class="image north korea blue white red horizontal star circle asia" src=flags_20200913\kp.png>
 			<div class="overlay">Northa Korea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image south korea white black red blue circle" src=flags_20200913\kr.png>
+			<img class="image south korea white black red blue circle asia" src=flags_20200913\kr.png>
 			<div class="overlay">South Korea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kuwait green white red black horizontal" src=flags_20200913\kw.png>
+			<img class="image kuwait green white red black horizontal asia" src=flags_20200913\kw.png>
 			<div class="overlay">Kuwait</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image cayman islands white blue red cross british text stars animals waves turtle" src=flags_20200913\ky.png>
+			<img class="image cayman islands white blue red cross british text stars animals waves turtle northa" src=flags_20200913\ky.png>
 			<div class="overlay">Cayman Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kazakhstan blue yellow circle sun bird animal" src=flags_20200913\kz.png>
+			<img class="image kazakhstan blue yellow circle sun bird animal asia" src=flags_20200913\kz.png>
 			<div class="overlay">Kazakhstan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image laos red blue white horizontal circle" src=flags_20200913\la.png>
+			<img class="image laos red blue white horizontal circle asia" src=flags_20200913\la.png>
 			<div class="overlay">Laos</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image lebanon red white green horizontal" src=flags_20200913\lb.png>
+			<img class="image lebanon red white green horizontal asia" src=flags_20200913\lb.png>
 			<div class="overlay">Lebanon</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint lucia blue white black yellow" src=flags_20200913\lc.png>
+			<img class="image saint lucia blue white black yellow northa" src=flags_20200913\lc.png>
 			<div class="overlay">Saint Lucia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image liechtenstein blue red yellow horizontal" src=flags_20200913\li.png>
+			<img class="image liechtenstein blue red yellow horizontal europe" src=flags_20200913\li.png>
 			<div class="overlay">Liechtenstein</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sri lanka yellow green orange maroon vertical animal" src=flags_20200913\lk.png>
+			<img class="image sri lanka yellow green orange maroon vertical animal asia" src=flags_20200913\lk.png>
 			<div class="overlay">Sri Lanka</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image liberia red white blue horizontal star" src=flags_20200913\lr.png>
+			<img class="image liberia red white blue horizontal star africa" src=flags_20200913\lr.png>
 			<div class="overlay">Liberia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image lesotho blue white green horizontal" src=flags_20200913\ls.png>
+			<img class="image lesotho blue white green horizontal africa" src=flags_20200913\ls.png>
 			<div class="overlay">Lesotho</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image lithuania yellow green red horizontal" src=flags_20200913\lt.png>
+			<img class="image lithuania yellow green red horizontal europe" src=flags_20200913\lt.png>
 			<div class="overlay">Lithuania</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image luxembourg red white blue horizontal" src=flags_20200913\lu.png>
+			<img class="image luxembourg red white blue horizontal europe" src=flags_20200913\lu.png>
 			<div class="overlay">Luxembourg</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image latvia red white horizontal" src=flags_20200913\lv.png>
+			<img class="image latvia red white horizontal europe" src=flags_20200913\lv.png>
 			<div class="overlay">Latvia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image libya red black green white horizontal star moon" src=flags_20200913\ly.png>
+			<img class="image libya red black green white horizontal star moon africa" src=flags_20200913\ly.png>
 			<div class="overlay">Libya</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image morocco red green star" src=flags_20200913\ma.png>
+			<img class="image morocco red green star africa" src=flags_20200913\ma.png>
 			<div class="overlay">Morocco</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image monaco red white horizontal" src=flags_20200913\mc.png>
+			<img class="image monaco red white horizontal europe" src=flags_20200913\mc.png>
 			<div class="overlay">Monaco</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image moldova blue yellow red vertical star bird animals" src=flags_20200913\md.png>
+			<img class="image moldova blue yellow red vertical star bird animals europe" src=flags_20200913\md.png>
 			<div class="overlay">Moldova</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image montenegro red yellow bird animals" src=flags_20200913\me.png>
+			<img class="image montenegro red yellow bird animals europe" src=flags_20200913\me.png>
 			<div class="overlay">Montenegro</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint martin blue white red vertical" src=flags_20200913\mf.png>
+			<img class="image saint martin blue white red vertical northa" src=flags_20200913\mf.png>
 			<div class="overlay">Saint Martin</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image madagascar white red green horizontal" src=flags_20200913\mg.png>
+			<img class="image madagascar white red green horizontal africa" src=flags_20200913\mg.png>
 			<div class="overlay">Madagascar</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image marshall islands blue white orange sun" src=flags_20200913\mh.png>
+			<img class="image marshall islands blue white orange sun oceania" src=flags_20200913\mh.png>
 			<div class="overlay">Marshall Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image north macedonia red yellow circle" src=flags_20200913\mk.png>
+			<img class="image north macedonia red yellow circle europe" src=flags_20200913\mk.png>
 			<div class="overlay">North Macedonia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mali green yellow red vertical" src=flags_20200913\ml.png>
+			<img class="image mali green yellow red vertical africa" src=flags_20200913\ml.png>
 			<div class="overlay">Mali</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image myanmar red blue white stars leaf" src=flags_20200913\mm.png>
+			<img class="image myanmar red blue white stars leaf asia" src=flags_20200913\mm.png>
 			<div class="overlay">Myanmar</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mongolia red blue yellow vertical circle" src=flags_20200913\mn.png>
+			<img class="image mongolia red blue yellow vertical circle asia" src=flags_20200913\mn.png>
 			<div class="overlay">Mongolia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image macau green white stars" src=flags_20200913\mo.png>
+			<img class="image macau green white stars asia" src=flags_20200913\mo.png>
 			<div class="overlay">Macau</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image northern mariana islands blue white grey circle" src=flags_20200913\mp.png>
+			<img class="image northern mariana islands blue white grey circle oceania" src=flags_20200913\mp.png>
 			<div class="overlay">Northern Mariana Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image martinique blue white cross animals snakes" src=flags_20200913\mq.png>
+			<img class="image martinique blue white cross animals snakes northa" src=flags_20200913\mq.png>
 			<div class="overlay">Martinique</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mauritania green yellow star moon" src=flags_20200913\mr.png>
+			<img class="image mauritania green yellow star moon africa" src=flags_20200913\mr.png>
 			<div class="overlay">Mauritania</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image montserrat blue white red cross british" src=flags_20200913\ms.png>
+			<img class="image montserrat blue white red cross british northa" src=flags_20200913\ms.png>
 			<div class="overlay">Montserrat</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image malta red white vertical cross animal text" src=flags_20200913\mt.png>
+			<img class="image malta red white vertical cross animal text europe" src=flags_20200913\mt.png>
 			<div class="overlay">Malta</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mauritius red blue yellow green horizontal" src=flags_20200913\mu.png>
+			<img class="image mauritius red blue yellow green horizontal africa" src=flags_20200913\mu.png>
 			<div class="overlay">Mauritius</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image maldives red green white moon" src=flags_20200913\mv.png>
+			<img class="image maldives red green white moon asia" src=flags_20200913\mv.png>
 			<div class="overlay">Maldives</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image malawi black red green horizontal sun" src=flags_20200913\mw.png>
+			<img class="image malawi black red green horizontal sun africa" src=flags_20200913\mw.png>
 			<div class="overlay">Malawi</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mexico green white red vertical bird animal" src=flags_20200913\mx.png>
+			<img class="image mexico green white red vertical bird animal northa" src=flags_20200913\mx.png>
 			<div class="overlay">Mexico</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image malaysia blue red white yellow horizontal moon star" src=flags_20200913\my.png>
+			<img class="image malaysia blue red white yellow horizontal moon star asia" src=flags_20200913\my.png>
 			<div class="overlay">Malaysia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mozambique green white black yellow red horizontal star" src=flags_20200913\mz.png>
+			<img class="image mozambique green white black yellow red horizontal star africa" src=flags_20200913\mz.png>
 			<div class="overlay">Mozambique</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image namibia blue white red green yellow sun circle" src=flags_20200913\na.png>
+			<img class="image namibia blue white red green yellow sun circle africa" src=flags_20200913\na.png>
 			<div class="overlay">Namibia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image new caledonia blue red green yellow black horizontal circle" src=flags_20200913\nc.png>
+			<img class="image new caledonia blue red green yellow black horizontal circle oceania" src=flags_20200913\nc.png>
 			<div class="overlay">New Caledonia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image niger orange white green horizontal circle" src=flags_20200913\ne.png>
+			<img class="image niger orange white green horizontal circle africa" src=flags_20200913\ne.png>
 			<div class="overlay">Niger</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image norfolk island green white vertical tree" src=flags_20200913\nf.png>
+			<img class="image norfolk island green white vertical tree oceania" src=flags_20200913\nf.png>
 			<div class="overlay">Norfolk Island</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image nigeria green white vertical" src=flags_20200913\ng.png>
+			<img class="image nigeria green white vertical africa" src=flags_20200913\ng.png>
 			<div class="overlay">Nigeria</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image nicaragua blue white horizontal text" src=flags_20200913\ni.png>
+			<img class="image nicaragua blue white horizontal text northa" src=flags_20200913\ni.png>
 			<div class="overlay">Nicaragua</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image netherlands red white blue horizontal" src=flags_20200913\nl.png>
+			<img class="image netherlands red white blue horizontal europe" src=flags_20200913\nl.png>
 			<div class="overlay">Netherlands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image norway blue red white cross" src=flags_20200913\no.png>
+			<img class="image norway blue red white cross europe nordic" src=flags_20200913\no.png>
 			<div class="overlay">Norway</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image nepal red blue white star" src=flags_20200913\np.png>
+			<img class="image nepal red blue white star asia" src=flags_20200913\np.png>
 			<div class="overlay">Nepal</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image nauru blue yellow white horizontal star" src=flags_20200913\nr.png>
+			<img class="image nauru blue yellow white horizontal star oceania" src=flags_20200913\nr.png>
 			<div class="overlay">Nauru</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image niue yellow blue white red cross british circle stars" src=flags_20200913\nu.png>
+			<img class="image niue yellow blue white red cross british circle stars oceania" src=flags_20200913\nu.png>
 			<div class="overlay">Niue</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image new zealand blue white red cross british stars" src=flags_20200913\nz.png>
+			<img class="image new zealand blue white red cross british stars oceania" src=flags_20200913\nz.png>
 			<div class="overlay">New Zealand</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image oman red white green horizontal" src=flags_20200913\om.png>
+			<img class="image oman red white green horizontal asia" src=flags_20200913\om.png>
 			<div class="overlay">Oman</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image panama white red blue horizontal vertical stars" src=flags_20200913\pa.png>
+			<img class="image panama white red blue horizontal vertical stars northa" src=flags_20200913\pa.png>
 			<div class="overlay">Panama</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image peru red white vertical" src=flags_20200913\pe.png>
+			<img class="image peru red white vertical southa" src=flags_20200913\pe.png>
 			<div class="overlay">Peru</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image french polynesia red white horizontal waves circle" src=flags_20200913\pf.png>
+			<img class="image french polynesia red white horizontal waves circle oceania" src=flags_20200913\pf.png>
 			<div class="overlay">French Polynesia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image papua new guinea red black yellow white stars bird animal " src=flags_20200913\pg.png>
+			<img class="image papua new guinea red black yellow white stars bird animal oceania" src=flags_20200913\pg.png>
 			<div class="overlay">Papua New Guinea</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image philippines blue red white yellow horizontal circle sun stars" src=flags_20200913\ph.png>
+			<img class="image philippines blue red white yellow horizontal circle sun stars asia" src=flags_20200913\ph.png>
 			<div class="overlay">Philippines</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image pakistan green white vertical moon star" src=flags_20200913\pk.png>
+			<img class="image pakistan green white vertical moon star asia" src=flags_20200913\pk.png>
 			<div class="overlay">Pakistan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image poland white red horizontal" src=flags_20200913\pl.png>
+			<img class="image poland white red horizontal europe" src=flags_20200913\pl.png>
 			<div class="overlay">Poland</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint pierre and miquelon white blue green red black cross waves animals" src=flags_20200913\pm.png>
+			<img class="image saint pierre and miquelon white blue green red black cross waves animals northa" src=flags_20200913\pm.png>
 			<div class="overlay">Saint Pierre and Miquelon</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image pitcairn islands blue white red yellow green cross british" src=flags_20200913\pn.png>
+			<img class="image pitcairn islands blue white red yellow green cross british oceania" src=flags_20200913\pn.png>
 			<div class="overlay">Pitcairn Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image puerto rico red white blue horizontal star" src=flags_20200913\pr.png>
+			<img class="image puerto rico red white blue horizontal star northa" src=flags_20200913\pr.png>
 			<div class="overlay">Puerto Rico</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image palestine red white green black horizontal" src=flags_20200913\ps.png>
+			<img class="image palestine red white green black horizontal asia" src=flags_20200913\ps.png>
 			<div class="overlay">Palestine</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image portugal green red vertical circle" src=flags_20200913\pt.png>
+			<img class="image portugal green red vertical circle europe" src=flags_20200913\pt.png>
 			<div class="overlay">Portugal</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image palau blue yellow circle" src=flags_20200913\pw.png>
+			<img class="image palau blue yellow circle oceania" src=flags_20200913\pw.png>
 			<div class="overlay">Palau</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image paraguay red white blue horizontal circle star leaf text" src=flags_20200913\py.png>
+			<img class="image paraguay red white blue horizontal circle star leaf text southa" src=flags_20200913\py.png>
 			<div class="overlay">Paraguay</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image qatar white maroon" src=flags_20200913\qa.png>
+			<img class="image qatar white maroon asia" src=flags_20200913\qa.png>
 			<div class="overlay">Qatar</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image réunion reunion red blue yellow" src=flags_20200913\re.png>
+			<img class="image réunion reunion red blue yellow africa" src=flags_20200913\re.png>
 			<div class="overlay">Réunion</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image romania blue yellow red vertical" src=flags_20200913\ro.png>
+			<img class="image romania blue yellow red vertical europe" src=flags_20200913\ro.png>
 			<div class="overlay">Romania</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image serbia red blue white horizontal bird animal" src=flags_20200913\rs.png>
+			<img class="image serbia red blue white horizontal bird animal europe" src=flags_20200913\rs.png>
 			<div class="overlay">Serbia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image russia white blue red horizontal" src=flags_20200913\ru.png>
+			<img class="image russia white blue red horizontal asia europe" src=flags_20200913\ru.png>
 			<div class="overlay">Russia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image rwanda blue yellow green horizontal sun circle" src=flags_20200913\rw.png>
+			<img class="image rwanda blue yellow green horizontal sun circle africa" src=flags_20200913\rw.png>
 			<div class="overlay">Rwanda</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saudi arabia green white text" src=flags_20200913\sa.png>
+			<img class="image saudi arabia green white text asia" src=flags_20200913\sa.png>
 			<div class="overlay">Saudi Arabia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image solomon islands blue yellow green white stars" src=flags_20200913\sb.png>
+			<img class="image solomon islands blue yellow green white stars oceania" src=flags_20200913\sb.png>
 			<div class="overlay">Solomon Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image seychelles blue yellow red white green" src=flags_20200913\sc.png>
+			<img class="image seychelles blue yellow red white green africa" src=flags_20200913\sc.png>
 			<div class="overlay">Seychelles</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sudan red white black green horizontal" src=flags_20200913\sd.png>
+			<img class="image sudan red white black green horizontal africa" src=flags_20200913\sd.png>
 			<div class="overlay">Sudan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sweden blue yellow cross" src=flags_20200913\se.png>
+			<img class="image sweden blue yellow cross europe nordic" src=flags_20200913\se.png>
 			<div class="overlay">Sweden</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image singapore red white horizontal moon stars" src=flags_20200913\sg.png>
+			<img class="image singapore red white horizontal moon stars asia" src=flags_20200913\sg.png>
 			<div class="overlay">Singapore</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint helena, ascension and tristan da cunha blue white red cross british bird waves" src=flags_20200913\sh.png>
+			<img class="image saint helena, ascension and tristan da cunha blue white red cross british bird waves africa" src=flags_20200913\sh.png>
 			<div class="overlay">Saint Helena, Ascension and Tristan da Cunha</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image slovenia white blue red horizontal stars" src=flags_20200913\si.png>
+			<img class="image slovenia white blue red horizontal stars europe" src=flags_20200913\si.png>
 			<div class="overlay">Slovenia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image svalbard and jan mayen red white blue cross" src=flags_20200913\sj.png>
+			<img class="image svalbard and jan mayen red white blue cross europe nordic" src=flags_20200913\sj.png>
 			<div class="overlay">Svalbard and Jan Mayen</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image slovakia white blue red horizontal cross" src=flags_20200913\sk.png>
+			<img class="image slovakia white blue red horizontal cross europe" src=flags_20200913\sk.png>
 			<div class="overlay">Slovakia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sierra leone green white blue horizontal" src=flags_20200913\sl.png>
+			<img class="image sierra leone green white blue horizontal africa" src=flags_20200913\sl.png>
 			<div class="overlay">Sierra Leone</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image san marino white blue horizontal leaf text" src=flags_20200913\sm.png>
+			<img class="image san marino white blue horizontal leaf text europe" src=flags_20200913\sm.png>
 			<div class="overlay">San Marino</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image senegal green yellow red vertical star" src=flags_20200913\sn.png>
+			<img class="image senegal green yellow red vertical star africa" src=flags_20200913\sn.png>
 			<div class="overlay">Senegal</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image somalia blue white star" src=flags_20200913\so.png>
+			<img class="image somalia blue white star africa" src=flags_20200913\so.png>
 			<div class="overlay">Somalia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image suriname green white red yellow horizontal star" src=flags_20200913\sr.png>
+			<img class="image suriname green white red yellow horizontal star southa" src=flags_20200913\sr.png>
 			<div class="overlay">Suriname</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image south sudan black blue red green yellow white horizontal star" src=flags_20200913\ss.png>
+			<img class="image south sudan black blue red green yellow white horizontal star africa" src=flags_20200913\ss.png>
 			<div class="overlay">South Sudan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sao tome principe green yellow red black horizontal star" src=flags_20200913\st.png>
+			<img class="image são tomé and príncipe sao tome principe green yellow red black horizontal star" src=flags_20200913\st.png>
 			<div class="overlay">São Tomé and Príncipe</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image el salvador blue white horizontal leaf text" src=flags_20200913\sv.png>
+			<img class="image el salvador blue white horizontal leaf text northa" src=flags_20200913\sv.png>
 			<div class="overlay">El Salvador</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image sint maarten blue red white yellow horizontal text" src=flags_20200913\sx.png>
+			<img class="image sint maarten blue red white yellow horizontal text northa" src=flags_20200913\sx.png>
 			<div class="overlay">Sint Maarten</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image syria red white blue green horizontal stars" src=flags_20200913\sy.png>
+			<img class="image syria red white blue green horizontal stars asia" src=flags_20200913\sy.png>
 			<div class="overlay">Syria</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image eswatini swaziland blue yellow red white black horizontal" src=flags_20200913\sz.png>
+			<img class="image eswatini swaziland blue yellow red white black horizontal africa" src=flags_20200913\sz.png>
 			<div class="overlay">Eswatini</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image turks and caicos islands blue white red yellow cross british animal" src=flags_20200913\tc.png>
+			<img class="image turks and caicos islands blue white red yellow cross british animal northa" src=flags_20200913\tc.png>
 			<div class="overlay">Turks and Caicos Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tchad blue yellow red vertical" src=flags_20200913\td.png>
-			<div class="overlay">Tchad</div>
+			<img class="image chad blue yellow red vertical africa" src=flags_20200913\td.png>
+			<div class="overlay">Chad</div>
 		</div>
 		
 		<div class="flag">
@@ -1178,172 +1185,172 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image togo green yellow red white horizontal star" src=flags_20200913\tg.png>
+			<img class="image togo green yellow red white horizontal star africa" src=flags_20200913\tg.png>
 			<div class="overlay">Togo</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image thailand red white blue horizontal" src=flags_20200913\th.png>
+			<img class="image thailand red white blue horizontal asia" src=flags_20200913\th.png>
 			<div class="overlay">Thailand</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tajikistan red white green horizontal stars" src=flags_20200913\tj.png>
+			<img class="image tajikistan red white green horizontal stars asia" src=flags_20200913\tj.png>
 			<div class="overlay">Tajikistan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tokelau blue yellow white stars" src=flags_20200913\tk.png>
+			<img class="image tokelau blue yellow white stars oceania" src=flags_20200913\tk.png>
 			<div class="overlay">Tokelau</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image timor-leste east timor red yellow black white star" src=flags_20200913\tl.png>
+			<img class="image timor-leste east timor red yellow black white star asia" src=flags_20200913\tl.png>
 			<div class="overlay">Timor-Leste (East Timor)</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image turkmenistan green red vertical moon stars" src=flags_20200913\tm.png>
+			<img class="image turkmenistan green red vertical moon stars asia" src=flags_20200913\tm.png>
 			<div class="overlay">Turkmenistan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tunisia red white circle moon star" src=flags_20200913\tn.png>
+			<img class="image tunisia red white circle moon star africa" src=flags_20200913\tn.png>
 			<div class="overlay">Tunisia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tonga red white cross" src=flags_20200913\to.png>
+			<img class="image tonga red white cross oceania" src=flags_20200913\to.png>
 			<div class="overlay">Tonga</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image turkey red white moon star" src=flags_20200913\tr.png>
+			<img class="image turkey red white moon star asia europe" src=flags_20200913\tr.png>
 			<div class="overlay">Turkey</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image trinidad tobago red white black" src=flags_20200913\tt.png>
+			<img class="image trinidad tobago red white black southa" src=flags_20200913\tt.png>
 			<div class="overlay">Trinidad and Tobago</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tuvalu blue red white yellow cross british stars" src=flags_20200913\tv.png>
+			<img class="image tuvalu blue red white yellow cross british stars oceania" src=flags_20200913\tv.png>
 			<div class="overlay">Tuvalu</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image taiwan red blue white circle sun" src=flags_20200913\tw.png>
+			<img class="image taiwan red blue white circle sun asia" src=flags_20200913\tw.png>
 			<div class="overlay">Taiwan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image tanzania green yellow black blue" src=flags_20200913\tz.png>
+			<img class="image tanzania green yellow black blue africa" src=flags_20200913\tz.png>
 			<div class="overlay">Tanzania</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image ukraine blue yellow horizontal" src=flags_20200913\ua.png>
+			<img class="image ukraine blue yellow horizontal europe" src=flags_20200913\ua.png>
 			<div class="overlay">Ukraine</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image uganda black yellow red horizontal circle bird animal" src=flags_20200913\ug.png>
+			<img class="image uganda black yellow red horizontal circle bird animal africa" src=flags_20200913\ug.png>
 			<div class="overlay">Uganda</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image united states minor outlying islands red white blue horizontal stars" src=flags_20200913\um.png>
+			<img class="image united states minor outlying islands red white blue horizontal stars northa" src=flags_20200913\um.png>
 			<div class="overlay">United States Minor Outlying Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image usa united states america red white blue horizontal stars" src=flags_20200913\us.png>
+			<img class="image usa united states america red white blue horizontal stars northa" src=flags_20200913\us.png>
 			<div class="overlay">United States</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image uruguay white blue horizontal sun" src=flags_20200913\uy.png>
+			<img class="image uruguay white blue horizontal sun southa" src=flags_20200913\uy.png>
 			<div class="overlay">Uruguay</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image uzbekistan blue white green red horizontal moon stars" src=flags_20200913\uz.png>
+			<img class="image uzbekistan blue white green red horizontal moon stars asia" src=flags_20200913\uz.png>
 			<div class="overlay">Uzbekistan</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image vatican city yellow white vertical" src=flags_20200913\va.png>
+			<img class="image vatican city yellow white vertical europe" src=flags_20200913\va.png>
 			<div class="overlay">Vatican City</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image saint vincent grenadines blue yellow green vertical" src=flags_20200913\vc.png>
+			<img class="image saint vincent grenadines blue yellow green vertical northa" src=flags_20200913\vc.png>
 			<div class="overlay">Saint Vincent and the Grenadines</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image venezuela yellow blue red horizontal stars" src=flags_20200913\ve.png>
+			<img class="image venezuela yellow blue red horizontal stars southa" src=flags_20200913\ve.png>
 			<div class="overlay">Venezuela</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image british virgin islands white blue red green yellow cross text" src=flags_20200913\vg.png>
+			<img class="image british virgin islands white blue red green yellow cross text northa" src=flags_20200913\vg.png>
 			<div class="overlay">British Virgin Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image united states virgin islands white blue yellow red bird text" src=flags_20200913\vi.png>
+			<img class="image united states virgin islands white blue yellow red bird text northa" src=flags_20200913\vi.png>
 			<div class="overlay">United States Virgin Islands</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image vietnam red yellow star" src=flags_20200913\vn.png>
+			<img class="image vietnam red yellow star asia" src=flags_20200913\vn.png>
 			<div class="overlay">Vietnam</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image vanuatu red green yellow black horizontal" src=flags_20200913\vu.png>
+			<img class="image vanuatu red green yellow black horizontal oceania" src=flags_20200913\vu.png>
 			<div class="overlay">Vanuatu</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image wallis and futuna red blue white vertical cross" src=flags_20200913\wf.png>
+			<img class="image wallis and futuna red blue white vertical cross oceania" src=flags_20200913\wf.png>
 			<div class="overlay">Wallis and Futuna</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image samoa red blue white stars" src=flags_20200913\ws.png>
+			<img class="image samoa red blue white stars oceania" src=flags_20200913\ws.png>
 			<div class="overlay">Samoa</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image kosovo blue yellow white stars" src=flags_20200913\xk.png>
+			<img class="image kosovo blue yellow white stars europe" src=flags_20200913\xk.png>
 			<div class="overlay">Kosovo</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image yemen red white black horizontal" src=flags_20200913\ye.png>
+			<img class="image yemen red white black horizontal asia" src=flags_20200913\ye.png>
 			<div class="overlay">Yemen</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image mayotte white red blue grey text animals moon stars" src=flags_20200913\yt.png>
+			<img class="image mayotte white red blue grey text animals moon stars africa" src=flags_20200913\yt.png>
 			<div class="overlay">Mayotte</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image south africa red gren blue white yellow black horizontal" src=flags_20200913\za.png>
+			<img class="image south africa red gren blue white yellow black horizontal africa" src=flags_20200913\za.png>
 			<div class="overlay">South Africa</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image zambia green red black orange bird animal" src=flags_20200913\zm.png>
+			<img class="image zambia green red black orange bird animal africa" src=flags_20200913\zm.png>
 			<div class="overlay">Zambia</div>
 		</div>
 		
 		<div class="flag">
-			<img class="image zimbabwe green yellow red black white horizontal star bird animal" src=flags_20200913\zw.png>
+			<img class="image zimbabwe green yellow red black white horizontal star bird animal africa" src=flags_20200913\zw.png>
 			<div class="overlay">Zimbabwe</div>
 		</div>
 
