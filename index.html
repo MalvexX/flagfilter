@@ -45,14 +45,16 @@ Mobile: 320×50
 	<div class="controls">
 		<div id="myButtons">
 			<button class="all filterbutton active" onclick="filterSelection('all')">Show all</button>
+			<button class="animal filterbutton" onclick="filterSelection('animal')">Animal</button>
 			<button class="cross filterbutton" onclick="filterSelection('cross')">Cross</button>
-			<button class="vertical filterbutton" onclick="filterSelection('vertical')">Vertical lines</button>
 			<button class="horizontal filterbutton" onclick="filterSelection('horizontal')">Horizontal lines</button>
+			<button class="vertical filterbutton" onclick="filterSelection('vertical')">Vertical lines</button>
 			<button class="star filterbutton" onclick="filterSelection('star')">Star</button>
 			<button class="british filterbutton" onclick="filterSelection('british')">British</button>
 		</div>
 		<div class="textInputField">
-			<input type="search" id="myInput" onkeyup="textFilter()" placeholder="Search for a name, color or pattern" title="Search for a name, color or pattern" autofocus>
+			<input type="search" id="myInput" onkeyup="textFilter()" placeholder="Search for name, color or pattern" title="Search for name, color or pattern" autofocus>
+			<!-- <input type="search" id="myInput" onkeyup="textFilter()" placeholder="Search for name, color, pattern or a combination" title="Search for name, color, pattern or a combination" autofocus> -->
 		</div>
 	</div>
 	
@@ -70,7 +72,7 @@ Mobile: 320×50
 		<div class="hover_bkgr_fricc">
 			<span class="helper"></span>
 			<div>
-				<p>Add any HTML content inside the popup box!</p>
+				<p>Placeholder text</p>
 			</div>
 		</div>
 		
@@ -81,7 +83,7 @@ Mobile: 320×50
 		<div class="hover_bkgr_fricc">
 			<span class="helper"></span>
 			<div>
-				<p>Add any HTML content inside the popup box!</p>
+				<p>Placeholder text</p>
 			</div>
 		</div>
 		
@@ -136,7 +138,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image australia blue white red british stars" src=flags_20200913\au.png>
+			<img class="image australia blue white red cross british stars" src=flags_20200913\au.png>
 			<div class="overlay">Australia</div>
 		</div>
 		
@@ -236,7 +238,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image bhutan orange red white animal dragon" src=flags_20200913\bt.png>
+			<img class="image bhutan orange white animal dragon" src=flags_20200913\bt.png>
 			<div class="overlay">Bhutan</div>
 		</div>
 		
@@ -426,7 +428,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image fiji blue white red british bird animals" src=flags_20200913\fj.png>
+			<img class="image fiji blue white red cross british bird animals" src=flags_20200913\fj.png>
 			<div class="overlay">Fiji</div>
 		</div>
 		
@@ -621,7 +623,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image british indian ccean territory blue red white cross waves tree" src=flags_20200913\io.png>
+			<img class="image british indian ocean territory blue red white cross waves tree" src=flags_20200913\io.png>
 			<div class="overlay">British Indian Ocean Territory</div>
 		</div>
 		
@@ -946,7 +948,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image new zealand blue white red british stars" src=flags_20200913\nz.png>
+			<img class="image new zealand blue white red cross british stars" src=flags_20200913\nz.png>
 			<div class="overlay">New Zealand</div>
 		</div>
 		
@@ -1226,7 +1228,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image tuvalu blue red white yellow british stars" src=flags_20200913\tv.png>
+			<img class="image tuvalu blue red white yellow cross british stars" src=flags_20200913\tv.png>
 			<div class="overlay">Tuvalu</div>
 		</div>
 		
@@ -1336,7 +1338,7 @@ Mobile: 320×50
 		</div>
 		
 		<div class="flag">
-			<img class="image zambia gren red black orange bird animal" src=flags_20200913\zm.png>
+			<img class="image zambia green red black orange bird animal" src=flags_20200913\zm.png>
 			<div class="overlay">Zambia</div>
 		</div>
 		
@@ -1367,9 +1369,10 @@ Mobile: 320×50
 	
 		/* Filter by input text field */
 		function textFilter() {
+			//clear active button
 			let current = document.getElementsByClassName("active");
 			if (current.length > 0) {
-				current[0].classList.remove("active");	//clear active button	
+				current[0].classList.remove("active");
 			}
 						
 			let rawinput = document.getElementById("myInput");
@@ -1384,9 +1387,49 @@ Mobile: 320×50
 		}
 		
 		function classFilter(input) {
+			
+			/* failed attempt at combination search
+			console.log("Input: \"" + input + "\"");
+
+			remove all commas; remove preceeding and trailing spaces; replace spaces with comma */
+			//input = input.replace(/,/g , '').replace(/^\s\s*/, '').replace(/\s\s*$/, '').replace(/[\s,]+/g, ',');
+			/* let splitinput = input.split(',');
+
 			let flags = document.getElementsByClassName("flag");
 			for (let i = 0; i < flags.length; i++) {
 				image = flags[i].getElementsByClassName("image");
+					if (splitinput.length == 1) {	//only one search term for quicker results
+						for (let k = 0; k < image[0].classList.length; k++) {
+							let textmatch = image[0].classList[k].toLowerCase().indexOf(input);
+							if (textmatch !== -1) {
+								flags[i].style.display = "";
+								break;
+							} else {
+								flags[i].style.display = "none";
+							}
+						}
+					} else {	//for more than one search term all of the words need to match perfectly
+						let textmatch = 0;
+						for (let n = 0; n < splitinput.length; n++) {
+							if (image[0].classList.contains(splitinput[n])) {
+								textmatch++;
+								if (textmatch == splitinput.length) {
+									flags[i].style.display = "";
+									break;
+								} else {
+									flags[i].style.display = "none";
+								}
+							}
+						}
+						
+					}
+			} */
+
+			
+			let flags = document.getElementsByClassName("flag");
+			for (let i = 0; i < flags.length; i++) {
+				image = flags[i].getElementsByClassName("image");
+				
 				for (let k = 0; k < image[0].classList.length; k++) {
 					let textmatch = image[0].classList[k].toLowerCase().indexOf(input);
 					if (textmatch !== -1) {
@@ -1422,7 +1465,6 @@ Mobile: 320×50
 				$('.hover_bkgr_fricc').hide();
 			});
 		});
-
 	</script>
   </body>
   <footer>
