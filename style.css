@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.15
+Version 0.16
 
 */
 
@@ -37,6 +37,10 @@ h1 {
 	padding: 12px 16px;
 	background-color: #c8eaea;
 	cursor: pointer;
+}
+
+.filterbutton.all {
+	border: 2px solid #44bbbb;
 }
 
 .filterbutton:hover {
@@ -87,7 +91,7 @@ h1 {
   height: auto;
 } */
 
-.gallery {
+#gallery {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -153,7 +157,7 @@ footer {
 	color: #7cd0d0;
 }
 
-/* Popup box BEGIN 
+/* Popup box BEGIN */
 .hover_bkgr_fricc{
     background: rgba(0,0,0,.4);
     cursor: pointer;
@@ -187,4 +191,4 @@ footer {
 .trigger_popup_fricc {
     cursor: pointer;
 }
- Popup box END */
+/* Popup box END */
