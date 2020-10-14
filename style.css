@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.14
+Version 0.16
 
 */
 
@@ -39,6 +39,10 @@ h1 {
 	cursor: pointer;
 }
 
+.filterbutton.all {
+	border: 2px solid #44bbbb;
+}
+
 .filterbutton:hover {
 	background-color: #b4e4e4;
 }
@@ -54,7 +58,7 @@ h1 {
 	margin: 10px;
 }
 
-input {
+#myInput {
 	font-family: 'Telex';
 	font-size: 12px;
 	padding: 6px;
@@ -69,7 +73,7 @@ input {
 	padding: 12px 20px 12px 40px;
 }
 
-input:focus {
+#myInput:focus {
 	outline: none;
 	border: 2px solid #44bbbb;
 	border-radius: 4px;
@@ -87,7 +91,7 @@ input:focus {
   height: auto;
 } */
 
-.gallery {
+#gallery {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
