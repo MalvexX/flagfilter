@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.12
+Version 0.13
 
 */
 
@@ -17,10 +17,7 @@ var textInput = "";
 /* Filter by input text field */
 function textFilter() {
 	let raw = document.getElementById("myInput");
-	textInput = raw.value.toLowerCase().trim();
-
-	console.log("textInput: " + textInput);
-	
+	textInput = raw.value.toLowerCase().trim();	
 	showFlags();
 }
 
@@ -133,3 +130,13 @@ $(window).on('load', function() {
 		$('.hover_bkgr_fricc').hide();
 	});
 });
+
+setInterval(function () {
+  // This event triggers a scan for new ad slots on the page, as well as
+  // refreshing existing ad slots
+  window.dispatchEvent(new CustomEvent('contextcue:fetch', {
+    detail: {
+      refreshExisting: true
+    }
+  }));
+}, 60*1000); // Every minute
