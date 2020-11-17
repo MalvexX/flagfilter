@@ -89,11 +89,28 @@ h1 {
   max-width: 100%;
   height: auto;
 } */
-#topBannerSpace {
-	display: flex;
-	justify-content: center;
-        margin-top: 15px;
-	margin-bottom: 15px;
+
+@media only screen and (min-width: 768px) {
+	#topBannerSpace {
+		display: flex;
+		justify-content: center;
+        	margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	#topBannerSpace_mobile {
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#topBannerSpace_mobile {
+		display: flex;
+		justify-content: center;
+        	margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	#topBannerSpace {
+		display: none;
+	}
 }
 
 #gallery {
