@@ -89,6 +89,12 @@ h1 {
   max-width: 100%;
   height: auto;
 } */
+#topBannerSpace {
+	display: flex;
+	justify-content: center;
+        margin-top: 15px;
+	margin-bottom: 15px;
+}
 
 #gallery {
 	display: flex;
