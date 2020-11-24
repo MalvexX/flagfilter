@@ -2,7 +2,7 @@
 <!--
 
 Flagfilter.com
-Version 0.18
+Version 0.19
 
 Main color: #44bbbb
 Main font: Telex
@@ -12,7 +12,7 @@ Leaderboard: 728×90
 Mobile: 320×50
 
 -->
-<html lang="en">
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,15 @@ Mobile: 320×50
 		<link rel='stylesheet' type='text/css' href='reset.css'>
 		<link rel='stylesheet' type='text/css' href='style.css'>
 
-		<link rel="icon" type="image/png" href="favicon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="manifest" href="site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#44bbbb">
+		<meta name="apple-mobile-web-app-title" content="Flagfilter">
+		<meta name="application-name" content="Flagfilter">
+		<meta name="msapplication-TileColor" content="#00aba9">
+		<meta name="theme-color" content="#44bbbb">
 		
 		<title>Flagfilter - Quick and easy keyword search for flags</title>
 		<link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet'>
@@ -40,8 +44,8 @@ Mobile: 320×50
 			<button class="all filterbutton active" onclick="classFilter('all')">Show all</button>
 			<button class="animal filterbutton" onclick="classFilter('animal')">Animal</button>
 			<!-- <button class="cross filterbutton" onclick="classFilter('cross')">Cross</button> -->
-			<button class="horizontal filterbutton" onclick="classFilter('horizontal')">Horizontal lines</button>
-			<button class="vertical filterbutton" onclick="classFilter('vertical')">Vertical lines</button>
+			<button class="horizontal filterbutton" onclick="classFilter('horizontal')">Horizontal stripes</button>
+			<button class="vertical filterbutton" onclick="classFilter('vertical')">Vertical stripes</button>
 			<!-- <button class="star filterbutton" onclick="classFilter('star')">Star</button> -->
 			<!-- <button class="british filterbutton" onclick="classFilter('british')">British</button> -->
 			<button class="africa filterbutton" onclick="classFilter('africa')">Africa</button>
@@ -57,27 +61,21 @@ Mobile: 320×50
 		</div>
 	</div>
 	
+	<!-- Preparation for banner implementation.
+	<div id="topBannerSpace">
+		<img id="banner" src=banner.png>
+	</div>
+	-->
+	
 	<div id="gallery">
-		<div class="flag andorra blue yellow red cows animals text europe">
+		<div class="flag andorra blue yellow red cow cows animal animals text europe">
 			<img class="image" src=https://flagcdn.com/w320/ad.png>
-			<a class="overlay trigger_popup_fricc">Andorra</a>
+			<a class="overlay">Andorra</a>
 		</div>
-		<div class="hover_bkgr_fricc">
-			<span class="helper"></span>
-			<div>
-				<p>Placeholder text</p>
-			</div>
-		</div>
-		
+
 		<div class="flag united arab emirates red green white black horizontal asia">
 			<img class="image" src=https://flagcdn.com/w320/ae.png>
-			<div class="overlay trigger_popup_fricc">United Arab Emirates</div>
-		</div>
-		<div class="hover_bkgr_fricc">
-			<span class="helper"></span>
-			<div>
-				<p>Placeholder text</p>
-			</div>
+			<div class="overlay">United Arab Emirates</div>
 		</div>
 		
 		<div class="flag afghanistan black red green vertical text asia">
@@ -85,12 +83,12 @@ Mobile: 320×50
 			<div class="overlay">Afghanistan</div>
 		</div>
 		
-		<div class="flag antigua barbuda red black blue white sun northa">
+		<div class="flag antigua barbuda red black blue white sun sunrise sunset triangle triangles northa">
 			<img class="image" src=https://flagcdn.com/w320/ag.png>
 			<div class="overlay">Antigua and Barbuda</div>
 		</div>
 		
-		<div class="flag anguilla blue red white orange cross british animals dolphins northa">
+		<div class="flag anguilla blue red white orange cross british animal animals dolphin dolphins northa">
 			<img class="image" src=https://flagcdn.com/w320/ai.png>
 			<div class="overlay">Anguilla</div>
 		</div>
@@ -120,7 +118,7 @@ Mobile: 320×50
 			<div class="overlay">Argentina</div>
 		</div>
 		
-		<div class="flag american samoa blue white red bird animal eagle oceania">
+		<div class="flag american samoa blue white triangle triangles red bird animal bald eagle weapon war club fly-whisk oceania">
 			<img class="image" src=https://flagcdn.com/w320/as.png>
 			<div class="overlay">American Samoa</div>
 		</div>
@@ -150,7 +148,7 @@ Mobile: 320×50
 			<div class="overlay">Azerbaijan</div>
 		</div>
 		
-		<div class="flag bosnia herzegovina blue yellow star stars europe">
+		<div class="flag bosnia herzegovina blue yellow triangle star stars europe">
 			<img class="image" src=https://flagcdn.com/w320/ba.png>
 			<div class="overlay">Bosnia and Herzegovina</div>
 		</div>
@@ -180,12 +178,12 @@ Mobile: 320×50
 			<div class="overlay">Bulgaria</div>
 		</div>
 		
-		<div class="flag bahrain white red asia">
+		<div class="flag bahrain white red triangle triangles saw asia">
 			<img class="image" src=https://flagcdn.com/w320/bh.png>
 			<div class="overlay">Bahrain</div>
 		</div>
 		
-		<div class="flag burundi green red white cross star stars circle africa">
+		<div class="flag burundi green red white cross star triangle triangles stars circle africa">
 			<img class="image" src=https://flagcdn.com/w320/bi.png>
 			<div class="overlay">Burundi</div>
 		</div>
@@ -195,17 +193,17 @@ Mobile: 320×50
 			<div class="overlay">Benin</div>
 		</div>
 		
-		<div class="flag saint barthélemy barthelemy white blue red yellow animals birds text cross star northa">
+		<div class="flag saint barthélemy barthelemy white blue red yellow horizontal animal animals bird birds crown crowns castle text maltese cross fleurs-de-lis star banner northa">
 			<img class="image" src=https://flagcdn.com/w320/bl.png>
 			<div class="overlay">Saint Barthélemy</div>
 		</div>
 		
-		<div class="flag bermuda red blue white cross british animal northa">
+		<div class="flag bermuda red blue white cross british animal lion bear ship wave waves rock grass northa">
 			<img class="image" src=https://flagcdn.com/w320/bm.png>
 			<div class="overlay">Bermuda</div>
 		</div>
 		
-		<div class="flag brunei yellow black white red text asia">
+		<div class="flag brunei yellow black white red triangle triangles text asia">
 			<img class="image" src=https://flagcdn.com/w320/bn.png>
 			<div class="overlay">Brunei</div>
 		</div>
@@ -215,7 +213,7 @@ Mobile: 320×50
 			<div class="overlay">Bolivia</div>
 		</div>
 		
-		<div class="flag caribbean netherlands blue white yellow red black star northa">
+		<div class="flag caribbean netherlands blue white yellow red black triangle triangles star northa">
 			<img class="image" src=https://flagcdn.com/w320/bq.png>
 			<div class="overlay">Caribbean Netherlands</div>
 		</div>
@@ -225,12 +223,12 @@ Mobile: 320×50
 			<div class="overlay">Brazil</div>
 		</div>
 		
-		<div class="flag bahamas black blue yellow horizontal northa">
+		<div class="flag bahamas black blue yellow triangle horizontal northa">
 			<img class="image" src=https://flagcdn.com/w320/bs.png>
 			<div class="overlay">Bahamas</div>
 		</div>
 		
-		<div class="flag bhutan orange white animal dragon asia">
+		<div class="flag bhutan orange white triangle triangles animal dragon asia">
 			<img class="image" src=https://flagcdn.com/w320/bt.png>
 			<div class="overlay">Bhutan</div>
 		</div>
@@ -265,7 +263,7 @@ Mobile: 320×50
 			<div class="overlay">Cocos (Keeling) Islands</div>
 		</div>
 		
-		<div class="flag congo blue yellow red star africa">
+		<div class="flag congo blue yellow red triangle triangles star africa">
 			<img class="image" src=https://flagcdn.com/w320/cd.png>
 			<div class="overlay">Democratic Republic of the Congo</div>
 		</div>
@@ -275,7 +273,7 @@ Mobile: 320×50
 			<div class="overlay">Central African Republic</div>
 		</div>
 		
-		<div class="flag congo brazzaville green yellow red africa">
+		<div class="flag congo brazzaville green yellow red triangle triangles africa">
 			<img class="image" src=https://flagcdn.com/w320/cg.png>
 			<div class="overlay">Republic of the Congo</div>
 		</div>
@@ -320,7 +318,7 @@ Mobile: 320×50
 			<div class="overlay">Costa Rica</div>
 		</div>
 		
-		<div class="flag cuba blue white red star horizontal northa">
+		<div class="flag cuba blue white red triangle star horizontal northa">
 			<img class="image" src=https://flagcdn.com/w320/cu.png>
 			<div class="overlay">Cuba</div>
 		</div>
@@ -335,7 +333,7 @@ Mobile: 320×50
 			<div class="overlay">Curaçao</div>
 		</div>
 		
-		<div class="flag christmas island blue green white yellow star stars animal bird map oceania">
+		<div class="flag christmas island blue green white yellow triangle triangles star stars animal bird map oceania">
 			<img class="image" src=https://flagcdn.com/w320/cx.png>
 			<div class="overlay">Christmas Island</div>
 		</div>
@@ -345,7 +343,7 @@ Mobile: 320×50
 			<div class="overlay">Cyprus</div>
 		</div>
 		
-		<div class="flag czechia white red blue horizontal europe">
+		<div class="flag czechia white red blue triangle horizontal europe">
 			<img class="image" src=https://flagcdn.com/w320/cz.png>
 			<div class="overlay">Czechia</div>
 		</div>
@@ -355,7 +353,7 @@ Mobile: 320×50
 			<div class="overlay">Germany</div>
 		</div>
 		
-		<div class="flag djibouti white blue green red horizontal star africa">
+		<div class="flag djibouti white blue green red triangle horizontal star africa">
 			<img class="image" src=https://flagcdn.com/w320/dj.png>
 			<div class="overlay">Djibouti</div>
 		</div>
@@ -395,12 +393,12 @@ Mobile: 320×50
 			<div class="overlay">Egypt</div>
 		</div>
 		
-		<div class="flag western sahara black white green red horizontal moon star africa">
+		<div class="flag western sahara black white green red triangle horizontal moon star africa">
 			<img class="image" src=https://flagcdn.com/w320/eh.png>
 			<div class="overlay">Western Sahara</div>
 		</div>
 		
-		<div class="flag eritrea green red blue yellow leaf africa">
+		<div class="flag eritrea green red blue yellow triangle triangles leaf africa">
 			<img class="image" src=https://flagcdn.com/w320/er.png>
 			<div class="overlay">Eritrea</div>
 		</div>
@@ -410,7 +408,7 @@ Mobile: 320×50
 			<div class="overlay">Spain</div>
 		</div>
 		
-		<div class="flag ethiopia green yellow red blue star circle africa">
+		<div class="flag ethiopia green yellow red blue triangle triangles star circle africa">
 			<img class="image" src=https://flagcdn.com/w320/et.png>
 			<div class="overlay">Ethiopia</div>
 		</div>
@@ -420,7 +418,7 @@ Mobile: 320×50
 			<div class="overlay">Finland</div>
 		</div>
 		
-		<div class="flag fiji blue white red cross british bird animals oceania">
+		<div class="flag fiji blue white red cross british bird animal animals oceania">
 			<img class="image" src=https://flagcdn.com/w320/fj.png>
 			<div class="overlay">Fiji</div>
 		</div>
@@ -465,7 +463,7 @@ Mobile: 320×50
 			<div class="overlay">Northern Ireland</div>
 		</div>
 		
-		<div class="flag scotland blue white cross europe">
+		<div class="flag scotland blue white triangle triangles cross europe">
 			<img class="image" src=https://flagcdn.com/w320/gb-sct.png>
 			<div class="overlay">Scotland</div>
 		</div>
@@ -475,7 +473,7 @@ Mobile: 320×50
 			<div class="overlay">Wales</div>
 		</div>
 		
-		<div class="flag grenada red yellow green star stars northa">
+		<div class="flag grenada red yellow green triangle triangles star stars northa">
 			<img class="image" src=https://flagcdn.com/w320/gd.png>
 			<div class="overlay">Grenada</div>
 		</div>
@@ -485,7 +483,7 @@ Mobile: 320×50
 			<div class="overlay">Georgia</div>
 		</div>
 		
-		<div class="flag french guiana green yellow red star southa">
+		<div class="flag french guiana green yellow red triangle triangles star southa">
 			<img class="image" src=https://flagcdn.com/w320/gf.png>
 			<div class="overlay">French Guiana</div>
 		</div>
@@ -525,7 +523,7 @@ Mobile: 320×50
 			<div class="overlay">Guadeloupe</div>
 		</div>
 		
-		<div class="flag equatorial guinea green white red blue star stars text leaf africa">
+		<div class="flag equatorial guinea green white red blue triangle star stars text leaf africa">
 			<img class="image" src=https://flagcdn.com/w320/gq.png>
 			<div class="overlay">Equatorial Guinea</div>
 		</div>
@@ -535,7 +533,7 @@ Mobile: 320×50
 			<div class="overlay">Greece</div>
 		</div>
 		
-		<div class="flag south georgia blue white red cross british animals text">
+		<div class="flag south georgia blue white red cross british animal animals text">
 			<img class="image" src=https://flagcdn.com/w320/gs.png>
 			<div class="overlay">South Georgia</div>
 		</div>
@@ -555,7 +553,7 @@ Mobile: 320×50
 			<div class="overlay">Guam</div>
 		</div>
 		
-		<div class="flag guyana green white yellow black red southa">
+		<div class="flag guyana green white yellow black red triangle triangles southa">
 			<img class="image" src=https://flagcdn.com/w320/gy.png>
 			<div class="overlay">Guyana</div>
 		</div>
@@ -575,7 +573,7 @@ Mobile: 320×50
 			<div class="overlay">Honduras</div>
 		</div>
 		
-		<div class="flag croatia red white blue horizontal animals europe">
+		<div class="flag croatia red white blue horizontal animal animals europe">
 			<img class="image" src=https://flagcdn.com/w320/hr.png>
 			<div class="overlay">Croatia</div>
 		</div>
@@ -600,7 +598,7 @@ Mobile: 320×50
 			<div class="overlay">Ireland</div>
 		</div>
 		
-		<div class="flag israel white blue horizontal star asia">
+		<div class="flag israel white blue triangle triangles horizontal star asia">
 			<img class="image" src=https://flagcdn.com/w320/il.png>
 			<div class="overlay">Israel</div>
 		</div>
@@ -640,17 +638,17 @@ Mobile: 320×50
 			<div class="overlay">Italy</div>
 		</div>
 		
-		<div class="flag jersey white red cross animals europe">
+		<div class="flag jersey white red triangle triangles cross animal animals europe">
 			<img class="image" src=https://flagcdn.com/w320/je.png>
 			<div class="overlay">Jersey</div>
 		</div>
 		
-		<div class="flag jamaica green yellow black cross northa">
+		<div class="flag jamaica green yellow black triangle triangles cross northa">
 			<img class="image" src=https://flagcdn.com/w320/jm.png>
 			<div class="overlay">Jamaica</div>
 		</div>
 		
-		<div class="flag jordan black white green red horizontal star">
+		<div class="flag jordan black white green red triangle horizontal star">
 			<img class="image" src=https://flagcdn.com/w320/jo.png>
 			<div class="overlay">Jordan</div>
 		</div>
@@ -680,12 +678,12 @@ Mobile: 320×50
 			<div class="overlay">Kiribati</div>
 		</div>
 		
-		<div class="flag comoros green yellow white red blue horizontal moon star stars africa">
+		<div class="flag comoros green yellow white red blue triangle horizontal moon star stars africa">
 			<img class="image" src=https://flagcdn.com/w320/km.png>
 			<div class="overlay">Comoros</div>
 		</div>
 		
-		<div class="flag saint kitts nevis green yellow black white red star stars northa">
+		<div class="flag saint kitts nevis green yellow black white red triangle triangles star stars northa">
 			<img class="image" src=https://flagcdn.com/w320/kn.png>
 			<div class="overlay">Saint Kitts and Nevis</div>
 		</div>
@@ -725,7 +723,7 @@ Mobile: 320×50
 			<div class="overlay">Lebanon</div>
 		</div>
 		
-		<div class="flag saint lucia blue white black yellow northa">
+		<div class="flag saint lucia blue white black yellow triangle triangles northa">
 			<img class="image" src=https://flagcdn.com/w320/lc.png>
 			<div class="overlay">Saint Lucia</div>
 		</div>
@@ -780,12 +778,12 @@ Mobile: 320×50
 			<div class="overlay">Monaco</div>
 		</div>
 		
-		<div class="flag moldova blue yellow red vertical star bird animals europe">
+		<div class="flag moldova blue yellow red vertical star bird animal animals europe">
 			<img class="image" src=https://flagcdn.com/w320/md.png>
 			<div class="overlay">Moldova</div>
 		</div>
 		
-		<div class="flag montenegro red yellow bird animals europe">
+		<div class="flag montenegro red yellow bird animal animals europe">
 			<img class="image" src=https://flagcdn.com/w320/me.png>
 			<div class="overlay">Montenegro</div>
 		</div>
@@ -800,12 +798,12 @@ Mobile: 320×50
 			<div class="overlay">Madagascar</div>
 		</div>
 		
-		<div class="flag marshall islands blue white orange sun oceania">
+		<div class="flag marshall islands blue white orange triangle triangles sun oceania">
 			<img class="image" src=https://flagcdn.com/w320/mh.png>
 			<div class="overlay">Marshall Islands</div>
 		</div>
 		
-		<div class="flag north macedonia red yellow circle europe">
+		<div class="flag north macedonia red yellow triangle triangles circle europe">
 			<img class="image" src=https://flagcdn.com/w320/mk.png>
 			<div class="overlay">North Macedonia</div>
 		</div>
@@ -835,7 +833,7 @@ Mobile: 320×50
 			<div class="overlay">Northern Mariana Islands</div>
 		</div>
 		
-		<div class="flag martinique blue white cross animals snakes northa">
+		<div class="flag martinique blue white cross animal animals snake snakes northa">
 			<img class="image" src=https://flagcdn.com/w320/mq.png>
 			<div class="overlay">Martinique</div>
 		</div>
@@ -880,12 +878,12 @@ Mobile: 320×50
 			<div class="overlay">Malaysia</div>
 		</div>
 		
-		<div class="flag mozambique green white black yellow red horizontal star africa">
+		<div class="flag mozambique green white black yellow red triangle horizontal star africa">
 			<img class="image" src=https://flagcdn.com/w320/mz.png>
 			<div class="overlay">Mozambique</div>
 		</div>
 		
-		<div class="flag namibia blue white red green yellow sun circle africa">
+		<div class="flag namibia blue white red green yellow triangle triangles sun circle africa">
 			<img class="image" src=https://flagcdn.com/w320/na.png>
 			<div class="overlay">Namibia</div>
 		</div>
@@ -925,7 +923,7 @@ Mobile: 320×50
 			<div class="overlay">Norway</div>
 		</div>
 		
-		<div class="flag nepal red blue white star asia">
+		<div class="flag nepal red blue white triangle triangles star asia">
 			<img class="image" src=https://flagcdn.com/w320/np.png>
 			<div class="overlay">Nepal</div>
 		</div>
@@ -965,12 +963,12 @@ Mobile: 320×50
 			<div class="overlay">French Polynesia</div>
 		</div>
 		
-		<div class="flag papua new guinea red black yellow white star stars bird animal oceania">
+		<div class="flag papua new guinea red black yellow white triangle triangles star stars bird animal oceania">
 			<img class="image" src=https://flagcdn.com/w320/pg.png>
 			<div class="overlay">Papua New Guinea</div>
 		</div>
 		
-		<div class="flag philippines blue red white yellow horizontal circle sun star stars asia">
+		<div class="flag philippines blue red white yellow triangle horizontal circle sun star stars asia">
 			<img class="image" src=https://flagcdn.com/w320/ph.png>
 			<div class="overlay">Philippines</div>
 		</div>
@@ -985,7 +983,7 @@ Mobile: 320×50
 			<div class="overlay">Poland</div>
 		</div>
 		
-		<div class="flag saint pierre and miquelon white blue green red black cross waves animals northa">
+		<div class="flag saint pierre and miquelon white blue green red black triangle triangles cross waves animal animals northa">
 			<img class="image" src=https://flagcdn.com/w320/pm.png>
 			<div class="overlay">Saint Pierre and Miquelon</div>
 		</div>
@@ -995,12 +993,12 @@ Mobile: 320×50
 			<div class="overlay">Pitcairn Islands</div>
 		</div>
 		
-		<div class="flag puerto rico red white blue horizontal star northa">
+		<div class="flag puerto rico red white blue triangle horizontal star northa">
 			<img class="image" src=https://flagcdn.com/w320/pr.png>
 			<div class="overlay">Puerto Rico</div>
 		</div>
 		
-		<div class="flag palestine red white green black horizontal asia">
+		<div class="flag palestine red white green black triangle horizontal asia">
 			<img class="image" src=https://flagcdn.com/w320/ps.png>
 			<div class="overlay">Palestine</div>
 		</div>
@@ -1020,12 +1018,12 @@ Mobile: 320×50
 			<div class="overlay">Paraguay</div>
 		</div>
 		
-		<div class="flag qatar white maroon asia">
+		<div class="flag qatar white maroon triangle triangles saw asia">
 			<img class="image" src=https://flagcdn.com/w320/qa.png>
 			<div class="overlay">Qatar</div>
 		</div>
 		
-		<div class="flag réunion reunion red blue yellow africa">
+		<div class="flag réunion reunion red blue yellow triangle triangles africa">
 			<img class="image" src=https://flagcdn.com/w320/re.png>
 			<div class="overlay">Réunion</div>
 		</div>
@@ -1055,17 +1053,17 @@ Mobile: 320×50
 			<div class="overlay">Saudi Arabia</div>
 		</div>
 		
-		<div class="flag solomon islands blue yellow green white star stars oceania">
+		<div class="flag solomon islands blue yellow green white triangle triangles star stars oceania">
 			<img class="image" src=https://flagcdn.com/w320/sb.png>
 			<div class="overlay">Solomon Islands</div>
 		</div>
 		
-		<div class="flag seychelles blue yellow red white green africa">
+		<div class="flag seychelles blue yellow red white green triangle triangles africa">
 			<img class="image" src=https://flagcdn.com/w320/sc.png>
 			<div class="overlay">Seychelles</div>
 		</div>
 		
-		<div class="flag sudan red white black green horizontal africa">
+		<div class="flag sudan red white black green triangle horizontal africa">
 			<img class="image" src=https://flagcdn.com/w320/sd.png>
 			<div class="overlay">Sudan</div>
 		</div>
@@ -1125,12 +1123,12 @@ Mobile: 320×50
 			<div class="overlay">Suriname</div>
 		</div>
 		
-		<div class="flag south sudan black blue red green yellow white horizontal star africa">
+		<div class="flag south sudan black blue red green yellow white triangle horizontal star africa">
 			<img class="image" src=https://flagcdn.com/w320/ss.png>
 			<div class="overlay">South Sudan</div>
 		</div>
 		
-		<div class="flag são tomé and príncipe sao tome principe green yellow red black horizontal star">
+		<div class="flag são tomé and príncipe sao tome principe green yellow red black triangle horizontal star">
 			<img class="image" src=https://flagcdn.com/w320/st.png>
 			<div class="overlay">São Tomé and Príncipe</div>
 		</div>
@@ -1140,7 +1138,7 @@ Mobile: 320×50
 			<div class="overlay">El Salvador</div>
 		</div>
 		
-		<div class="flag sint maarten blue red white yellow horizontal text northa">
+		<div class="flag sint maarten blue red white yellow triangle horizontal text northa">
 			<img class="image" src=https://flagcdn.com/w320/sx.png>
 			<div class="overlay">Sint Maarten</div>
 		</div>
@@ -1185,12 +1183,12 @@ Mobile: 320×50
 			<div class="overlay">Tajikistan</div>
 		</div>
 		
-		<div class="flag tokelau blue yellow white star stars oceania">
+		<div class="flag tokelau blue yellow white triangle star stars oceania">
 			<img class="image" src=https://flagcdn.com/w320/tk.png>
 			<div class="overlay">Tokelau</div>
 		</div>
 		
-		<div class="flag timor-leste east timor red yellow black white star asia">
+		<div class="flag timor-leste east timor red yellow black white triangle triangles star asia">
 			<img class="image" src=https://flagcdn.com/w320/tl.png>
 			<div class="overlay">Timor-Leste (East Timor)</div>
 		</div>
@@ -1215,7 +1213,7 @@ Mobile: 320×50
 			<div class="overlay">Turkey</div>
 		</div>
 		
-		<div class="flag trinidad tobago red white black southa">
+		<div class="flag trinidad tobago red white black triangle triangles southa">
 			<img class="image" src=https://flagcdn.com/w320/tt.png>
 			<div class="overlay">Trinidad and Tobago</div>
 		</div>
@@ -1230,7 +1228,7 @@ Mobile: 320×50
 			<div class="overlay">Taiwan</div>
 		</div>
 		
-		<div class="flag tanzania green yellow black blue africa">
+		<div class="flag tanzania green yellow black blue triangle triangles africa">
 			<img class="image" src=https://flagcdn.com/w320/tz.png>
 			<div class="overlay">Tanzania</div>
 		</div>
@@ -1295,12 +1293,12 @@ Mobile: 320×50
 			<div class="overlay">Vietnam</div>
 		</div>
 		
-		<div class="flag vanuatu red green yellow black horizontal oceania">
+		<div class="flag vanuatu red green yellow black triangle triangles horizontal oceania">
 			<img class="image" src=https://flagcdn.com/w320/vu.png>
 			<div class="overlay">Vanuatu</div>
 		</div>
 		
-		<div class="flag wallis and futuna red blue white vertical cross oceania">
+		<div class="flag wallis and futuna red blue white triangle triangles vertical cross oceania">
 			<img class="image" src=https://flagcdn.com/w320/wf.png>
 			<div class="overlay">Wallis and Futuna</div>
 		</div>
@@ -1320,12 +1318,12 @@ Mobile: 320×50
 			<div class="overlay">Yemen</div>
 		</div>
 		
-		<div class="flag mayotte white red blue grey text animals moon star stars africa">
+		<div class="flag mayotte white red blue grey text animal animals moon star stars africa">
 			<img class="image" src=https://flagcdn.com/w320/yt.png>
 			<div class="overlay">Mayotte</div>
 		</div>
 		
-		<div class="flag south africa red gren blue white yellow black horizontal africa">
+		<div class="flag south africa red gren blue white yellow black triangle triangles horizontal africa">
 			<img class="image" src=https://flagcdn.com/w320/za.png>
 			<div class="overlay">South Africa</div>
 		</div>
