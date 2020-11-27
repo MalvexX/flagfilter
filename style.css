@@ -62,6 +62,7 @@ h1 {
 	width: 40%;
 	width: 500px;
 	margin-bottom: 4px;
+	padding-left: 4px;
 }
 
 #myInput {
@@ -89,7 +90,8 @@ h1 {
 	font-family: 'Telex';
 	font-size: 14px;
 	color: #44bbbb;
-	padding-left: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /* #topBannerSpace	{
