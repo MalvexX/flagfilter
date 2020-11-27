@@ -2,7 +2,7 @@
 <!--
 
 Flagfilter.com
-Version 0.20
+Version 0.21
 
 Main color: #44bbbb
 Main font: Telex
@@ -56,8 +56,12 @@ Mobile: 320×50
 			<button class="southa filterbutton" onclick="classFilter('southa')">South America</button>
 			<button class="oceania filterbutton" onclick="classFilter('oceania')">Oceania</button>
 		</div>
-		<div class="textInputField">
-			<input type="search" id="myInput" onkeyup="textFilter();" placeholder="Example: blue yellow cross" title="Search for name, color, pattern or a combination">
+		<div id="textInput">
+			<div class="textInputField">
+				<input type="search" id="myInput" onkeyup="textFilter();" placeholder="Example: blue yellow cross" title="Search for name, color, pattern or a combination">
+			</div>
+			<p id="searchCounter">0</p>
+			</div>
 		</div>
 	</div>
 	
