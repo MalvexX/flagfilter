@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.13
+Version 0.14
 
 */
 
@@ -13,6 +13,10 @@ inputField.focus();
 
 var buttonArray = new Array();	// Button search terms
 var textInput = "";
+
+// Update count of visible flags
+let searchCount = document.getElementsByClassName("flag");
+document.getElementById("searchCounter").innerHTML = searchCount.length;
 
 /* Filter by input text field */
 function textFilter() {
@@ -75,6 +79,9 @@ function showAllFlags() {
 	for (let i = 0; i < allFlags.length; i++) {
 		allFlags[i].style.display = "";
 	}
+	let searchCount = document.getElementsByClassName("flag");
+	document.getElementById("searchCounter").innerHTML = searchCount.length;
+	
 	document.title = pageTitle;
 }
 
@@ -88,9 +95,12 @@ function showFlags() {
 	}
 	
 	var list = "";
-	
+
 	if (buttonInput.length == 0 && textInput.length == 0) {
 		showAllFlags();
+		let searchCount = document.getElementsByClassName("flag");
+		document.getElementById("searchCounter").innerHTML = searchCount.length;
+		
 	} else {
 		list = textInput + buttonInput;
 
@@ -98,6 +108,8 @@ function showFlags() {
 		for (let n = 0; n < visibleFlags.length; n++) {
 			visibleFlags[n].style.display = "";
 		}
+
+		document.getElementById("searchCounter").innerHTML = visibleFlags.length;
 	}
 	// Set title to search terms
 	if (list.length > 0) {
@@ -129,7 +141,7 @@ function setActiveButton(input) {
 		filterbuttons[0].classList.remove("active");	// Clear active status of the "Show all" button
 		
 		let newActiveButton = myButtons.getElementsByClassName(input);
-		if (newActiveButton.length > 0){
+		if (newActiveButton.length > 0) {
 			
 			// Remove active status if button is unpressed
 			if (newActiveButton[0].classList.contains("active")) {
