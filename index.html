@@ -2,7 +2,7 @@
 <!--
 
 Flagfilter.com
-Version 0.25
+Version 0.26a
 
 Main color: #44bbbb
 Main font: Telex
@@ -17,11 +17,11 @@ Mobile: 320×50
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<meta name="description" content="Flagfilter is quick and easy to use for finding that flag you are looking for. Search for name, color, pattern or a combination." />
+		<meta name="description" content="Flagfilter is quick and easy to use for finding the flags you are looking for. Search for name, color, pattern or a combination." />
 		<title>Flagfilter - Quick and easy keyword search for flags</title>
 
 		<meta property="og:title" content="Flagfilter - Quick and easy keyword search for flags" />
-		<meta property="og:description" content="Flagfilter is quick and easy to use for finding that flag you are looking for. Search for name, color, pattern or a combination." />
+		<meta property="og:description" content="Flagfilter is quick and easy to use for finding the flags you are looking for. Search for name, color, pattern or a combination." />
 		<meta property="og:url" content="https://flagfilter.com" />
 		<meta property="og:site_name" content="Flagfilter" />
 		<meta property="og:type" content="website" />
@@ -40,7 +40,7 @@ Mobile: 320×50
 		<link rel='stylesheet' type='text/css' href='reset.css'>
 		<link rel='stylesheet' type='text/css' href='style.css'>
 		
-		<link href='https://fonts.googleapis.com/css?family=Telex&display=swap' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet'>
 	</head>
 	<body>
 
@@ -48,26 +48,26 @@ Mobile: 320×50
 
 	<div class="controls">
 		<div id="myButtons">
-			<button class="all filterbutton active" onclick="classFilter('all')">Show all</button>
-			<button class="animal filterbutton" onclick="classFilter('animal')">Animal</button>
-			<!-- <button class="cross filterbutton" onclick="classFilter('cross')">Cross</button> -->
-			<button class="horizontal filterbutton" onclick="classFilter('horizontal')">Horizontal stripes</button>
-			<button class="vertical filterbutton" onclick="classFilter('vertical')">Vertical stripes</button>
-			<!-- <button class="star filterbutton" onclick="classFilter('star')">Star</button> -->
-			<!-- <button class="british filterbutton" onclick="classFilter('british')">British</button> -->
-			<button class="africa filterbutton" onclick="classFilter('africa')">Africa</button>
-			<button class="asia filterbutton" onclick="classFilter('asia')">Asia</button>
-			<button class="europe filterbutton" onclick="classFilter('europe')">Europe</button>
-			<!-- <button class="nordic filterbutton" onclick="classFilter('nordic')">Nordic</button> -->
-			<button class="northa filterbutton" onclick="classFilter('northa')">North America</button>
-			<button class="southa filterbutton" onclick="classFilter('southa')">South America</button>
-			<button class="oceania filterbutton" onclick="classFilter('oceania')">Oceania</button>
+			<button class="all filterbutton active" onclick="buttonFilter('all')">Show all</button>
+			<button class="animal filterbutton" onclick="buttonFilter('animal')">Animal</button>
+			<!-- <button class="cross filterbutton" onclick="buttonFilter('cross')">Cross</button> -->
+			<button class="horizontal filterbutton" onclick="buttonFilter('horizontal')">Horizontal stripes</button>
+			<button class="vertical filterbutton" onclick="buttonFilter('vertical')">Vertical stripes</button>
+			<!-- <button class="star filterbutton" onclick="buttonFilter('star')">Star</button> -->
+			<!-- <button class="british filterbutton" onclick="buttonFilter('british')">British</button> -->
+			<button class="africa filterbutton" onclick="buttonFilter('africa')">Africa</button>
+			<button class="asia filterbutton" onclick="buttonFilter('asia')">Asia</button>
+			<button class="europe filterbutton" onclick="buttonFilter('europe')">Europe</button>
+			<!-- <button class="nordic filterbutton" onclick="buttonFilter('nordic')">Nordic</button> -->
+			<button class="northa filterbutton" onclick="buttonFilter('northa')">North America</button>
+			<button class="southa filterbutton" onclick="buttonFilter('southa')">South America</button>
+			<button class="oceania filterbutton" onclick="buttonFilter('oceania')">Oceania</button>
 		</div>
 		<div id="textInput">
 			<div class="textInputField">
 				<input type="search" id="myInput" onkeyup="textFilter();" placeholder="Example: blue yellow cross" title="Search for name, color, pattern or a combination">
 			</div>
-			<p id="searchCounter">0</p>
+			<p id="searchCounter">Loading</p>
 			</div>
 		</div>
 	</div>

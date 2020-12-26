@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.14
+Version 0.15
 
 */
 
@@ -11,146 +11,191 @@ const pageTitle = "Flagfilter - Quick and easy keyword search for flags";
 let inputField = document.getElementById("myInput");
 inputField.focus();
 
-var buttonArray = new Array();	// Button search terms
-var textInput = "";
+// Filter parameters
+var buttonArray = new Array();	// Button
+var textInput = "";				// Text
+var theURL = new URL(document.location); // URL query
 
-// Update count of visible flags
-let searchCount = document.getElementsByClassName("flag");
-document.getElementById("searchCounter").innerHTML = searchCount.length;
+// console.log("theURL.searchParams: " + theURL.searchParams.toString());
+// console.log("theURL.searchParams.toString().length: " + theURL.searchParams.toString().length);
 
-/* Filter by input text field */
-function textFilter() {
-	let raw = document.getElementById("myInput");
-	textInput = raw.value.toLowerCase().trim();
+var list = "";	// Preparation of concatenated list of filters
+var visibleCount = 0;
 
-	if (textInput.length == 0 && buttonArray.length == 0) {
-		setActiveButton("all");
-	}
+var URLparams = "";
+if (theURL.searchParams.toString().length > 0) { // Perform initial filtering based on the URL query
+	// Saving URL query by deleting the first two characters ("q=") and replace "+" with spaces
+	URLparams = theURL.searchParams.toString().substring(2).replace(/\+/g,' ');
+	
 	showFlags();
 }
 
-function classFilter(input) {
+updateCount();
+
+// Update count of visible flags
+function updateCount(input) {
+	// console.log("updateCount input: " + input);
+	// console.log("updateCount list.length: " + list.length);
 	
-	// Testing if input is new and should be added to buttonArray
-	if (buttonArray.indexOf(input) == -1) {
-		buttonArray.push(input);	// Add input to buttonArray
+	if (input == "all" || list.length == 0) {
+		visibleCount = document.getElementsByClassName("flag").length;
 	} else {
-		buttonArray.splice(buttonArray.indexOf(input), 1);	// Removing input from buttonArray
-
-		if (textInput.length == 0 && buttonArray.length == 0) {
-			setActiveButton("all");
-		}
+		visibleCount = document.getElementsByClassName(list).length;
 	}
-
-	if (input == "all") {
-		buttonArray = [];	// Reset buttonArray
-		document.getElementById("myInput").value = "";		// Clear text search field
-		setActiveButton("all");
-		showAllFlags();
-		
-	} else if (buttonArray.length == 0) {
-		buttonArray = [];	// Reset buttonArray
-		
-		if (textInput.length == 0) {
-			setActiveButton("all");
-		} else {
-			setActiveButton("none");
-		}
-		showFlags();
-		
-	} else {
-		setActiveButton(input);
-		showFlags();
-	}
+	
+	// Set new search counter
+	document.getElementById("searchCounter").innerHTML = visibleCount;
+	// console.log("visibleCount new value: " + visibleCount);
 }
 
-// Hiding all flags
+function updateTitle() {
+	document.title = "Flagfilter - " + list;
+}
+
+function resetTitle() {
+	document.title = pageTitle;
+}
+
+function clearURL() {
+	window.history.replaceState({}, '', `${location.pathname}`);	// Clear URL
+	// console.log("clearURL URL cleared.");
+}
+
+function setURL() {
+	theURL.searchParams.set('q', list);
+	window.history.replaceState({}, '', `${location.pathname}?${theURL.searchParams}`);	// Update URL
+}
+
+function mergeFilters() {
+	// Make the filter list from button inputs
+	let buttonInput = buttonArray.join(' ');
+	
+	// console.log("mergeFilters buttonInput: " + buttonInput);
+	// console.log("mergeFilters textInput: " + textInput);
+	// console.log("mergeFilters URLparams: " + URLparams);
+	
+	list = buttonInput + " " + textInput + " " + URLparams;
+	// console.log("mergeFilters list before trim: " + list);
+	list = list.trim();
+	// console.log("mergeFilters list after trim: " + list);
+}
+
 function hideAllFlags() {
 	let allFlags = document.getElementsByClassName("flag");
-	
 	for (let i = 0; i < allFlags.length; i++) {
 		allFlags[i].style.display = "none";
 	}
+	// console.log("hideAllFlags");
 }
 
 function showAllFlags() {
 	let allFlags = document.getElementsByClassName("flag");
-	
 	for (let i = 0; i < allFlags.length; i++) {
 		allFlags[i].style.display = "";
 	}
-	let searchCount = document.getElementsByClassName("flag");
-	document.getElementById("searchCounter").innerHTML = searchCount.length;
+	// console.log("showAllFlags");
+}
+
+// Clear active status from all buttons
+function clearActiveButtons() {
+	let myButtons = document.getElementById("myButtons");
+	let activeButtons = myButtons.getElementsByClassName("active");
 	
-	document.title = pageTitle;
+	while(activeButtons.length > 0) {
+		activeButtons[0].classList.remove("active");
+	}
+}
+
+// Add active status to matching buttons
+function setActiveButtons(input) {
+	if (input == "all") {
+		let newActiveButton = myButtons.getElementsByClassName("all");
+		newActiveButton[0].classList.add("active");		// Add active status to "Show all" button
+		// console.log("setActiveButtons setting 'All' button to active.");
+	} else {
+		// console.log("setActiveButtons list: " + list);
+		let splitList = list.split(" ");
+		// console.log("setActiveButtons split list: " + splitList);
+		let item = "";
+		let myButtons = document.getElementById("myButtons");
+		
+		for (let i = 0; i < splitList.length; i++) {
+			item = splitList[i];
+			// console.log("setActiveButtons item: " + item);
+			let activeButtons = myButtons.getElementsByClassName(item);
+			// console.log("setActiveButtons activeButtons count: " + activeButtons.length);
+			for (let k = 0; k < activeButtons.length; k++) {
+				activeButtons[k].classList.add("active");
+			}
+		}
+	}
+	
+}
+
+function clearButtonArray() {
+	buttonArray = [];	// Reset buttonArray
+	// console.log("clearButtonArray array reset.");
+}
+
+function clearTextField() {
+	document.getElementById("myInput").value = ""; // Clear input field
+	textInput = ""; // Reset text input variable
+	// console.log("clearTextField Resetting textInput.");
+}
+
+// Filter by text
+function textFilter() {
+	let raw = document.getElementById("myInput");
+	textInput = raw.value.toLowerCase().trim(); // Convert input to lower case for matching
+	textInput = textInput.replace(/,+/g, ' '); // Replace repeating commas with spaces
+	textInput = textInput.replace(/ +/g, ' '); // Replace repeating spaces with a single space
+	showFlags();
+}
+
+// Filter by buttons
+function buttonFilter(input) {
+	// console.log("buttonFilter input: " + input);
+	// console.log("buttonFilter URLparams.indexOf(input): " + URLparams.indexOf(input));
+	if (URLparams.indexOf(input) > -1) { // Don't do anything if the button was already "pressed" from URL query
+		// console.log("buttonFilter input matches buttonArray: " + input);
+	} else if (buttonArray.indexOf(input) == -1) { // Add entry if not already there
+		// console.log("buttonFilter input match not found - adding " + input + " to array");
+		buttonArray.push(input); // Add input to buttonArray
+	} else { // Remove entry if it already exists
+		// console.log("buttonFilter input match found - removing " + input + " from array");
+		buttonArray.splice(buttonArray.indexOf(input), 1); // Removing input from buttonArray
+	}
+	showFlags();
 }
 
 function showFlags() {
-	hideAllFlags();
 	
-	// Make the filter list from button inputs
-	let buttonInput = ""
-	for (k = 0; k < buttonArray.length; k++) {
-		buttonInput = buttonInput + " " + buttonArray[k];
-	}
-	
-	var list = "";
-
-	if (buttonInput.length == 0 && textInput.length == 0) {
+	// console.log("showFlags buttonArray.length: " + buttonArray.length);
+	// console.log("showFlags buttonArray last entry: " + buttonArray[buttonArray.length-1]);
+	if (buttonArray[buttonArray.length-1] == "all" || (buttonArray.length == 0 && textInput.length == 0 && URLparams.length == 0)) {
+		// console.log("showFlags show all if entry");
 		showAllFlags();
-		let searchCount = document.getElementsByClassName("flag");
-		document.getElementById("searchCounter").innerHTML = searchCount.length;
-		
+		clearActiveButtons();
+		clearButtonArray();
+		setActiveButtons("all");
+		updateCount("all");
+		clearTextField();
+		resetTitle();
+		clearURL();
+		URLparams = "";
 	} else {
-		list = textInput + buttonInput;
-
+		hideAllFlags();
+		mergeFilters();
+	
 		let visibleFlags = document.getElementsByClassName(list);
 		for (let n = 0; n < visibleFlags.length; n++) {
-			visibleFlags[n].style.display = "";
+			visibleFlags[n].style.display = ""; // Show all flags matching filter
 		}
-
-		document.getElementById("searchCounter").innerHTML = visibleFlags.length;
+		
+		clearActiveButtons();
+		setActiveButtons();
+		updateCount();
+		updateTitle();
+		setURL();
 	}
-	// Set title to search terms
-	if (list.length > 0) {
-		document.title = "Flagfilter - " + list;
-		
-	} else {
-		document.title = pageTitle;
-	}
-}
-
-function setActiveButton(input) {
-	if (input == "none" || input == "all") {
-		let myButtons = document.getElementById("myButtons");
-		let activeButtons = myButtons.getElementsByClassName("active");
-
-		// Clear active status from all buttons
-		while(activeButtons.length > 0) {
-			activeButtons[0].classList.remove("active");
-		}
-		
-		if (input == "all") {
-			let newActiveButton = myButtons.getElementsByClassName("all");
-			newActiveButton[0].classList.add("active");		// Add active status to "Show all" button
-		}
-		
-	} else {
-		let myButtons = document.getElementById("myButtons");
-		let filterbuttons = myButtons.getElementsByClassName("filterbutton");
-		filterbuttons[0].classList.remove("active");	// Clear active status of the "Show all" button
-		
-		let newActiveButton = myButtons.getElementsByClassName(input);
-		if (newActiveButton.length > 0) {
-			
-			// Remove active status if button is unpressed
-			if (newActiveButton[0].classList.contains("active")) {
-			newActiveButton[0].classList.remove("active");
-			} else {
-				newActiveButton[0].classList.add("active");
-			}
-		}
-		
-	}
-	
 }
