@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.15
+Version 0.16
 
 */
 
@@ -26,6 +26,9 @@ var URLparams = "";
 if (theURL.searchParams.toString().length > 0) { // Perform initial filtering based on the URL query
 	// Saving URL query by deleting the first two characters ("q=") and replace "+" with spaces
 	URLparams = theURL.searchParams.toString().substring(2).replace(/\+/g,' ');
+	let textField = document.getElementById("myInput");
+	textField.value = URLparams;
+	textInput = URLparams;
 	
 	showFlags();
 }
@@ -74,7 +77,8 @@ function mergeFilters() {
 	// console.log("mergeFilters textInput: " + textInput);
 	// console.log("mergeFilters URLparams: " + URLparams);
 	
-	list = buttonInput + " " + textInput + " " + URLparams;
+	// list = buttonInput + " " + textInput + " " + URLparams;
+	list = buttonInput + " " + textInput;
 	// console.log("mergeFilters list before trim: " + list);
 	list = list.trim();
 	// console.log("mergeFilters list after trim: " + list);
