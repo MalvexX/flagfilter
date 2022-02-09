@@ -1,7 +1,7 @@
 /*
 
 Flagfilter.com
-Version 0.17
+Version 0.18
 
 */
 
@@ -9,6 +9,12 @@ Version 0.17
 
 body {
 	background-color: #ecf8f8;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -138,7 +144,7 @@ h1 {
 }
 
 /* Container needed to position the overlay. Adjust the width as needed */
-.flag {
+.flagobject {
 	position: relative;
 	width: 80%;
 	max-width: 320px;
@@ -147,7 +153,7 @@ h1 {
 }
 
 /* Makes the overlay fit */
-.image {
+.flagobject img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -171,21 +177,17 @@ h1 {
 }
 
 /* When you mouse over the container, fade in the overlay title */
-.flag:hover .overlay {
+.flagobject:hover .overlay {
 	opacity: 1;
+	cursor: pointer;
 }
 
 /* For mobile phones */
 @media only screen and (max-width: 768px) {
-	.flag {
+	.flagobject img {
 		width: 100%;
 		max-width: 160px;
 	}
-}
-
-a {
-	color: #44bbbb;
-	/* color: #2E7D7D; */
 }
 
 footer {
@@ -196,3 +198,133 @@ footer {
 	color: #7cd0d0;
 	/* color: #1F5555; */
 }
+
+footer a {
+	color: #44bbbb;
+	/* color: #2E7D7D; */
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+.modal-content {
+	position: absolute;
+	bottom: 10px;
+	left: 20%;
+	font-family: 'Georgia';
+	/* right: 50%; */
+	/* justify-content: center; */
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	background-color: #ecf8f8;
+	width: 60%;
+	/* height: 100%; */
+	/* max-width: 600px; */
+	/* -webkit-animation-name: slideIn; */
+	/* -webkit-animation-duration: 0.4s; */
+	animation-name: slideIn;
+	animation-duration: 0.4s;
+}
+/*
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}*/
+
+.modal-header {
+	background-color: #44bbbb;
+	/* display: flex; */
+	position: relative;
+}
+
+.modal-header h2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 5px;
+	/* border: solid 2px black; */
+	width: 100%;
+	color: white;
+	font-family: 'Telex';
+    font-size: 20px;
+}
+
+.modal-image {
+	max-width: 640px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal-body {
+	padding: 2px 5px;
+}
+
+.modal-table th, td {
+	padding: 0px 10px 0px 0px;
+}
+
+.modal-body b {
+	font-weight: 700;
+}
+
+.modal-body p {
+	line-height: 1.2;
+}
+
+.modal-footer {
+	padding: 5px;
+	background-color: #44bbbb;
+	font-family: 'Telex';
+	font-size: 12px;
+}
+
+.modal-footer a:link, .modal-footer a:visited {
+	color: white;
+}
+
+/* Add Animation */ /*
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}  */
+/*
+@keyframes slideIn {
+	from {bottom: -300px; opacity: 0}
+	to {bottom: 0; opacity: 1}
+}*/
+/*
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}*/
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/* Modal ends here */
