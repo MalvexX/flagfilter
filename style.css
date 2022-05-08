@@ -182,14 +182,6 @@ h1 {
 	cursor: pointer;
 }
 
-/* For mobile phones */
-@media only screen and (max-width: 768px) {
-	.flagobject img {
-		width: 100%;
-		max-width: 160px;
-	}
-}
-
 footer {
 	font-family: 'Telex';
 	font-size: 12px;
@@ -273,7 +265,8 @@ footer a {
 }
 
 .modal-image {
-	max-width: 640px;
+	/* max-width: 640px; */
+	max-width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -328,3 +321,11 @@ footer a {
 }
 
 /* Modal ends here */
+
+/* For mobile phones */
+ @media only screen and (max-width: 1080px) {
+	.modal-content {
+		left: 10%;
+		width: 80%;
+	}
+}
