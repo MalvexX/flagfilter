@@ -173,7 +173,7 @@ function buttonFilter(input) {
 }
 
 function showModal(input) {
-	console.log("showModal input: " + input);
+	// console.log("showModal input: " + input);
 	
 	let modal = document.getElementById(input);
 	modal.style.display = "block";
@@ -183,7 +183,7 @@ function showModal(input) {
 window.onclick = function() {
 	let modalActive = document.getElementsByClassName("modalActive");
 	if (event.target == modalActive[0]) {
-		console.log("Hiding modal");
+		// console.log("Hiding modal");
 		modalActive[0].style.display = "none";
 		modalActive[0].classList.remove("modalActive");
 	}
