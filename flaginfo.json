@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Andorra",
+        "shortname": "ad",
+        "imagelink": "https://flagcdn.com/w640/ad.png",
+        "tags": "andorra blue yellow red cows animals text vertical europe",
+        "proprtion": "7:10",
+        "adoption": "1971",
+        "symbolism": "The design is related to the flags of <a href=\"?q=france\">France</a>, <a href=\"?q=spain\">Spain</a>, Catalonia and Foix, the lands historically linked with Andorra.<br>A flag of three stripes is similar to that of the French Tricolor, while the pattern of a wider middle stripe can be noted on the Spanish flag.<br>The blue and red of the Andorran flag are also found on the French flag, with red and yellow also being the colors of the Catalan flag (as the old royal symbol of the Crown of Aragon) and the arms of the old County of Foix (currently part of France).<br>The coat of arms of Andorra in the center of the flag contains historical symbolism to Bishop of Urgell, Count of Foix, Catalonia, and the Viscounty of Béarn.</p>",
+        "funfacts": "Although the three vertical stripes may at first appear to be of equal width, the centre yellow stripe is slightly wider than the other two so that the ratio of stripe widths is 8:9:8.<br>The design is similar to the flags of <a href=\"?q=romania\">Romania</a>, <a href=\"?q=moldova\">Moldova</a>, and <a href=\"?q=chad\">Chad</a> but these have stripes of equal width.<br>The coat of arms makes it one of 28 national flags to contain <a href=\"?q=christianity\">Christian</a> symbolism.</p>",
+        "wikipedialink": "https://en.wikipedia.org/wiki/Flag_of_Andorra"
+    },
+
+    {
+        "name": "United Arab Emirates",
+        "shortname": "ae",
+        "imagelink": "https://flagcdn.com/w640/ae.png",
+        "tags": "united arab emirates red green white black horizontal pan-arab asia",
+        "proprtion": "1:2",
+        "adoption": "1971",
+        "symbolism": "Red (Hashemite dynasty): Courage, bravery, hardiness, strength, and unity.<br>White (Umayyad dynasty): Cleanliness, honesty, peace, and purity.<br>Green (Fatimid dynasty): Prosperity, hope, joy, love, and optimism.<br>Black (Abbasid dynasty): Defeating enemies and strength of mind.<br>",
+        "funfacts": "Contrary to popular belief; the black part of the flag does not refer to oil.<br>Abdullah Mohammed Al Maainah was only 19 years old when he designed the flag after a competition was held in the newspaper. He did not know that his design won the competition until the flag was hoisted since the newspaper was printed in black and white.<br>The design was inspired by a poem, written by 14th century poet Safi al-Din al-Hilli.",
+        "wikipedialink": "https://en.wikipedia.org/wiki/Flag_of_the_United_Arab_Emirates"
+    },
+
+    {
+        "name": "Afghanistan",
+        "shortname": "af",
+        "imagelink": "https://flagcdn.com/w640/af.png",
+        "tags": "afghanistan black red green vertical stripes text motto name flag nationalflag mosque building asia",
+        "proprtion": "2:3",
+        "adoption": "2013",
+        "symbolism": "Black: Its troubled 19th century history as a protected state.<br>Red: The blood of those who fought for independence (specifically, the Anglo-Afghan Treaty of 1919) or progress.<br>Green: The hope and prosperity for the future or alternatively agricultural prosperity or Islam.<br>",
+        "funfacts": "During the 20th century, Afghanistan went through 18 national flags. More than any other country during that time period.<br>The flag features a stylized version of the flag of <a href=\"?q=nationalflag\">itself</a>.<br>The tricolor design was supposedly inspired by the <a href=\"?q=germany\">German flag</a> after the Afghan King, Amanullah Khan, visited Europe with his wife in 1928.<br>",
+        "wikipedialink": "https://en.wikipedia.org/wiki/Flag_of_Afghanistan"
+    },
+
+    {
+        "name": "",
+        "shortname": "",
+        "imagelink": "",
+        "tags": "",
+        "proprtion": "",
+        "adoption": "",
+        "symbolism": "",
+        "funfacts": "",
+        "wikipedialink": ""
+    }
+]
