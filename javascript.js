@@ -246,3 +246,27 @@ function showFlags() {
 		setURL();
 	}
 }
+
+function populateFlags(){
+	const gallery2 = document.getElementById("gallery");
+	const myH1 = document.createElement('h1');
+  	myH1.textContent = "testString";
+  	gallery2.appendChild(myH1);
+}
+
+async function populate() {
+
+	const requestURL = 'flaginfo.json';
+	const request = new Request(requestURL);
+  
+	const response = await fetch(request);
+	const jsonFlags = await response.json();
+  
+	console.log("populate function");
+
+	populateFlags(jsonFlags);
+}
+
+
+
+populate();
