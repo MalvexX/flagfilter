@@ -30,6 +30,7 @@ function populateFlags(obj){
 		var flagdiv = document.createElement('div');	// Creating div for flag object
 
 		const tags = obj[k].tags.split(" ");
+		console.log(tags);
 		for (let m = 0; m < tags.length; m++) {
 			flagdiv.classList.add(tags[m]);
 		}
@@ -78,7 +79,7 @@ async function populate() {
 	const response = await fetch(request);
 	const jsonFlags = await response.json();
   
-	console.log("populate function");
+	// console.log("populate function");
 
 	populateFlags(jsonFlags);
 }
