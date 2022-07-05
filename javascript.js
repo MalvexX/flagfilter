@@ -22,6 +22,69 @@ var theURL = new URL(document.location); // URL query
 var list = "";	// Preparation of concatenated list of filters
 var visibleCount = 0;
 
+// Creating the wall of flags based on the json file content
+function populateFlags(obj){
+	const gallery = document.getElementById("gallery");
+
+	for (let k = 0; k < obj.length; k++) {
+		var flagdiv = document.createElement('div');	// Creating div for flag object
+
+		const tags = obj[k].tags.split(" ");
+		for (let m = 0; m < tags.length; m++) {
+			flagdiv.classList.add(tags[m]);
+		}
+		flagdiv.innerHTML = 
+				"<img class=\"image\" src=" + obj[k].imagelink + ">" +
+				"<div class=\"overlay\" onclick=\"showModal('modal_" + obj[k].shortname + "')\">" + obj[k].name + "</div>" +
+			"</div>";
+		gallery.appendChild(flagdiv);
+
+		var modaldiv = document.createElement('div');		// Creating modal
+		modaldiv.classList.add("modal");
+		modalId = "modal_" + obj[k].shortname;
+		modaldiv.id = modalId;
+
+		modaldiv.innerHTML = 
+				"<div class=\"modal-content\">" + 
+				"<div class=\"modal-header\">" + 
+					"<h2>" + obj[k].name + "</h2>" + 
+					"<img class=\"modal-image\" src=" + obj[k].imagelink + ">" + 
+				"</div>" + 
+				"<div class=\"modal-body\">" + 
+					"<table class=\"modal-table\">" + 
+						"<tr><td>Proportion:</td><td>" + obj[k].proportion + "</td></tr>" + 
+						"<tr><td>Year adopted:</td><td>" + obj[k].adopted + "</td></tr>" + 
+					"</table>" + 
+					"<br>" + 
+					"<p><b>Symbolism:</b></p>" + obj[k].symbolism +
+					"<br>" + 
+					"<p><b>Fun facts:</b></p>" + obj[k].funfacts + 
+				"</div>" + 
+				"<div class=\"modal-footer\">" + 
+					"<a href=" + obj[k].wikipedialink + "target=\"_blank\" rel=\"noopener\">" + obj[k].wikipedialink + "</a>" + 
+				"</div>" + 
+			"</div>" + 
+		"</div>";
+
+		gallery.appendChild(modaldiv);
+	}
+}
+
+async function populate() {
+
+	const requestURL = 'flaginfo.json';
+	const request = new Request(requestURL);
+  
+	const response = await fetch(request);
+	const jsonFlags = await response.json();
+  
+	console.log("populate function");
+
+	populateFlags(jsonFlags);
+}
+
+populate(); // Creating all flag objects from the flaginfo.json file
+
 var URLparams = "";
 if (theURL.searchParams.toString().length > 0) { // Perform initial filtering based on the URL query
 	// Saving URL query by deleting the first two characters ("q=") and replace "+" with spaces
@@ -246,27 +309,3 @@ function showFlags() {
 		setURL();
 	}
 }
-
-function populateFlags(){
-	const gallery2 = document.getElementById("gallery");
-	const myH1 = document.createElement('h1');
-  	myH1.textContent = "testString";
-  	gallery2.appendChild(myH1);
-}
-
-async function populate() {
-
-	const requestURL = 'flaginfo.json';
-	const request = new Request(requestURL);
-  
-	const response = await fetch(request);
-	const jsonFlags = await response.json();
-  
-	console.log("populate function");
-
-	populateFlags(jsonFlags);
-}
-
-
-
-populate();
