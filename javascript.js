@@ -16,8 +16,8 @@ var buttonArray = new Array();	// Button
 var textInput = "";				// Text
 var theURL = new URL(document.location); // URL query
 
-console.log("theURL.searchParams: " + theURL.searchParams.toString());
-console.log("theURL.searchParams.toString().length: " + theURL.searchParams.toString().length);
+// console.log("theURL.searchParams: " + theURL.searchParams.toString());
+// console.log("theURL.searchParams.toString().length: " + theURL.searchParams.toString().length);
 
 var list = "";	// Preparation of concatenated list of filters
 var visibleCount = 0;
@@ -135,7 +135,6 @@ function setActiveButtons(input) {
 			}
 		}
 	}
-	
 }
 
 function clearButtonArray() {
