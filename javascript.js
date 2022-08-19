@@ -24,8 +24,10 @@ var visibleCount = 0;
 
 var URLparams = "";
 if (theURL.searchParams.toString().length > 0) { // Perform initial filtering based on the URL query
+
 	// Saving URL query by deleting the first two characters ("q=") and replace "+" with spaces
 	URLparams = theURL.searchParams.toString().substring(2).replace(/\+/g,' ');
+	
 	let textField = document.getElementById("myInput");
 	textField.value = URLparams;
 	textInput = URLparams;
@@ -133,7 +135,6 @@ function setActiveButtons(input) {
 			}
 		}
 	}
-	
 }
 
 function clearButtonArray() {
