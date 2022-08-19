@@ -1,3 +1,9 @@
+/*
+
+Flagfilter.com
+Version 0.1 of populate.js
+
+*/
 // Creating the wall of flags based on the json file content
 function populateFlags(obj){
 	const gallery = document.getElementById("gallery");
