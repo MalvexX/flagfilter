@@ -35,7 +35,12 @@ if (theURL.searchParams.toString().length > 0) { // Perform initial filtering ba
 	showFlags();
 }
 
-updateCount();
+
+// Need a listener for when the page fully loads, otherwise updateCount has nothing to count (flag elements not created yet due to "async" populate function)
+window.addEventListener('load',() => {
+    // console.log("Flags on load: " + document.getElementsByClassName("flagobject").length);
+	updateCount();
+});
 
 // Update count of visible flags
 function updateCount(input) {

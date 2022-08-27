@@ -55,8 +55,7 @@ function populateFlags(obj){
 
 async function populate() {
 
-	const requestURL = 'flaginfo.json';
-	const request = new Request(requestURL);
+	const request = new Request('flaginfo.json');
   
 	const response = await fetch(request);
 	const jsonFlags = await response.json();
