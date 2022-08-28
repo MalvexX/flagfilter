@@ -36,10 +36,36 @@ if (theURL.searchParams.toString().length > 0) { // Perform initial filtering ba
 }
 
 
-// Need a listener for when the page fully loads, otherwise updateCount has nothing to count (flag elements not created yet due to "async" populate function)
+// Flag elements are not created yet due to populate script being "async".
+// This listener waits for the flags to load so we can handle things like counting the flags.
 window.addEventListener('load',() => {
     // console.log("Flags on load: " + document.getElementsByClassName("flagobject").length);
+
+	// Updating search counter, needs to be done after load so all flags are included.
 	updateCount();
+
+	// Creating a list of all classes so it can be used for partial matches
+	var allElements = document.getElementById('gallery').querySelectorAll('*');
+	// console.log(allElements.length);
+
+	var allFlagClasses = [];
+	for (let i = 0; i < allElements.length; i++) {
+
+		var elementClass = allElements[i].className.toString().split(" ");
+		if (elementClass[0] == "flagobject") {
+
+			// console.log(elementClass);
+			for (let j = 1; j < elementClass.length; j++) {
+				let singleClass = elementClass[j];
+
+				// Only saving unique classes to shorten the list
+				if (singleClass && allFlagClasses.indexOf(singleClass) === -1)
+					allFlagClasses.push(singleClass);
+				
+			}
+		}
+	}
+	console.log(allFlagClasses);
 });
 
 // Update count of visible flags
