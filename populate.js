@@ -44,7 +44,7 @@ function populateFlags(obj){
 					"<p><b>Fun facts:</b></p>" + obj[k].funfacts + 
 				"</div>" + 
 				"<div class=\"modal-footer\">" + 
-					"<a href=" + obj[k].wikipedialink + "target=\"_blank\" rel=\"noopener\">" + obj[k].wikipedialink + "</a>" + 
+					"<a href=" + obj[k].wikipedialink + " target=\"_blank\" rel=\"noopener noreferrer\">" + obj[k].wikipedialink + "</a>" + 
 				"</div>" + 
 			"</div>" + 
 		"</div>";

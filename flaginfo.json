@@ -180,7 +180,7 @@
 	},
 
 	{
-		"tags": "flagobject azerbaijan blue red green moon star horizontal stripes asia",
+		"tags": "flagobject azerbaijan blue red green moon crescent star horizontal stripes asia",
 		"imagelink": "https://flagcdn.com/w640/az.png",
 		"shortname": "az",
 		"name": "Azerbaijan",
@@ -324,7 +324,7 @@
 	},
 
 	{
-		"tags": "flagobject brunei yellow black white red stripes triangle triangles text motto name hand hands banner parasol moon flag diagonal asia",
+		"tags": "flagobject brunei yellow black white red stripes triangle triangles text motto name hand hands banner parasol moon crescent flag diagonal asia",
 		"imagelink": "https://flagcdn.com/w640/bn.png",
 		"shortname": "bn",
 		"name": "Brunei",
@@ -456,7 +456,7 @@
 	},
 
 	{
-		"tags": "flagobject cocos islands keeling islands green yellow star stars southern cross moon tree circle oceania",
+		"tags": "flagobject cocos islands keeling islands green yellow star stars southern cross moon crescent tree circle oceania",
 		"imagelink": "https://flagcdn.com/w640/cc.png",
 		"shortname": "cc",
 		"name": "Cocos (Keeling) Islands",
@@ -732,7 +732,7 @@
 	},
 
 	{
-		"tags": "flagobject algeria green white red vertical stripes star moon africa",
+		"tags": "flagobject algeria green white red vertical stripes star moon crescent africa",
 		"imagelink": "https://flagcdn.com/w640/dz.png",
 		"shortname": "dz",
 		"name": "Algeria",
@@ -780,7 +780,7 @@
 	},
 
 	{
-		"tags": "flagobject western sahara black white green red triangle horizontal stripes moon star pan-arab africa",
+		"tags": "flagobject western sahara black white green red triangle horizontal stripes moon crescent star pan-arab africa",
 		"imagelink": "https://flagcdn.com/w640/eh.png",
 		"shortname": "eh",
 		"name": "Western Sahara",
@@ -1212,7 +1212,7 @@
 	},
 
 	{
-		"tags": "flagobject croatia red white blue horizontal squares chessboard shield star moon leopard leopards lion lions goat pine marten stripes animal animals pan-slavic europe",
+		"tags": "flagobject croatia red white blue horizontal squares chessboard shield star moon crescent leopard leopards lion lions goat pine marten stripes animal animals pan-slavic europe",
 		"imagelink": "https://flagcdn.com/w640/hr.png",
 		"shortname": "hr",
 		"name": "Croatia",
@@ -1464,7 +1464,7 @@
 	},
 
 	{
-		"tags": "flagobject comoros green yellow white red blue triangle horizontal stripes moon star stars pan-african africa",
+		"tags": "flagobject comoros green yellow white red blue triangle horizontal stripes moon crescent star stars pan-african africa",
 		"imagelink": "https://flagcdn.com/w640/km.png",
 		"shortname": "km",
 		"name": "Comoros",
@@ -1668,7 +1668,7 @@
 	},
 
 	{
-		"tags": "flagobject libya red black green white horizontal stripes star moon pan-arab africa",
+		"tags": "flagobject libya red black green white horizontal stripes star moon crescent pan-arab africa",
 		"imagelink": "https://flagcdn.com/w640/ly.png",
 		"shortname": "ly",
 		"name": "Libya",
@@ -1704,7 +1704,7 @@
 	},
 
 	{
-		"tags": "flagobject moldova blue yellow red vertical stripes star moon bird eagle auroch animal animals shield cross olive branch rose flower europe",
+		"tags": "flagobject moldova blue yellow red vertical stripes star moon crescent bird eagle auroch animal animals shield cross olive branch rose flower europe",
 		"imagelink": "https://flagcdn.com/w640/md.png",
 		"shortname": "md",
 		"name": "Moldova",
@@ -1847,7 +1847,7 @@
 	},
 
 	{
-		"tags": "flagobject mauritania green yellow star moon horizontal stripes pan-african africa",
+		"tags": "flagobject mauritania green yellow star moon crescent horizontal stripes pan-african africa",
 		"imagelink": "https://flagcdn.com/w640/mr.png",
 		"shortname": "mr",
 		"name": "Mauritania",
@@ -1895,7 +1895,7 @@
 	},
 
 	{
-		"tags": "flagobject maldives red green white moon frame asia",
+		"tags": "flagobject maldives red green white moon crescent frame asia",
 		"imagelink": "https://flagcdn.com/w640/mv.png",
 		"shortname": "mv",
 		"name": "Maldives",
@@ -1931,7 +1931,7 @@
 	},
 
 	{
-		"tags": "flagobject malaysia blue red white yellow horizontal stripes moon star asia",
+		"tags": "flagobject malaysia blue red white yellow horizontal stripes moon crescent star asia",
 		"imagelink": "https://flagcdn.com/w640/my.png",
 		"shortname": "my",
 		"name": "Malaysia",
@@ -2051,7 +2051,7 @@
 	},
 
 	{
-		"tags": "flagobject nepal red blue white triangle triangles star sun moon asia",
+		"tags": "flagobject nepal red blue white triangle triangles star sun moon crescent asia",
 		"imagelink": "https://flagcdn.com/w640/np.png",
 		"shortname": "np",
 		"name": "Nepal",
@@ -2171,7 +2171,7 @@
 	},
 
 	{
-		"tags": "flagobject pakistan green white vertical stripes moon star asia",
+		"tags": "flagobject pakistan green white vertical stripes moon crescent star asia",
 		"imagelink": "https://flagcdn.com/w640/pk.png",
 		"shortname": "pk",
 		"name": "Pakistan",
@@ -2255,7 +2255,7 @@
 	},
 
 	{
-		"tags": "flagobject palau blue yellow circle oceania",
+		"tags": "flagobject palau blue yellow circle sun moon full oceania",
 		"imagelink": "https://flagcdn.com/w640/pw.png",
 		"shortname": "pw",
 		"name": "Palau",
@@ -2411,7 +2411,7 @@
 	},
 
 	{
-		"tags": "flagobject singapore red white horizontal stripes moon star stars asia",
+		"tags": "flagobject singapore red white horizontal stripes moon crescent star stars asia",
 		"imagelink": "https://flagcdn.com/w640/sg.png",
 		"shortname": "sg",
 		"name": "Singapore",
@@ -2699,7 +2699,7 @@
 	},
 
 	{
-		"tags": "flagobject turkmenistan green red vertical stripe carpet moon star stars olive branch branches wreath asia",
+		"tags": "flagobject turkmenistan green red vertical stripe carpet moon crescent star stars olive branch branches wreath asia",
 		"imagelink": "https://flagcdn.com/w640/tm.png",
 		"shortname": "tm",
 		"name": "Turkmenistan",
@@ -2735,7 +2735,7 @@
 	},
 
 	{
-		"tags": "flagobject turkey red white moon star asia europe",
+		"tags": "flagobject turkey red white moon crescent star asia europe",
 		"imagelink": "https://flagcdn.com/w640/tr.png",
 		"shortname": "tr",
 		"name": "Turkey",
@@ -2854,7 +2854,7 @@
 	},
 
 	{
-		"tags": "flagobject uzbekistan blue white green red horizontal stripes moon star stars asia",
+		"tags": "flagobject uzbekistan blue white green red horizontal stripes moon crescent star stars asia",
 		"imagelink": "https://flagcdn.com/w640/uz.png",
 		"shortname": "uz",
 		"name": "Uzbekistan",
@@ -2998,7 +2998,7 @@
 	},
 
 	{
-		"tags": "flagobject mayotte white red blue yellow grey text name banner ribbon animal animals seahorse seahorses flower flowers ylang-ylang moon star stars africa",
+		"tags": "flagobject mayotte white red blue yellow grey text name banner ribbon animal animals seahorse seahorses flower flowers ylang-ylang moon crescent star stars africa",
 		"imagelink": "https://flagcdn.com/w640/yt.png",
 		"shortname": "yt",
 		"name": "Mayotte",
