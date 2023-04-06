@@ -179,7 +179,7 @@ function buttonFilter(input) {
 }
 
 function showModal(input) {
-	// console.log("showModal input: " + input);
+	console.log("showModal input: " + input);
 	
 	let modal = document.getElementById(input);
 	modal.style.display = "block";
@@ -207,17 +207,24 @@ document.addEventListener(
 	"click",
 	function(event){
 		if (
-			event.target.matches(".close") ||
-			!event.target.closest(".modal")
+			event.target.matches(".close") || !event.target.closest(".overlay")
 		){
-			closeModal()
+			closeModal();
+			// console.log(event.target.closest(".overlay"));
 		}
 	},
 	false
 )
 
 function closeModal() {
-	document.querySelector(".modal").style.display = "none"
+	console.log("closeModal");
+	let modalActive = document.getElementsByClassName("modalActive");
+	// console.log(modalActive.length);
+	
+	if (modalActive.length > 0) {
+		document.querySelector(".modalActive").style.display = "none";
+		modalActive[0].classList.remove("modalActive");
+	}
 }
 
 // // When the user clicks on <span> (x), close the modal
