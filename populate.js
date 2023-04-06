@@ -31,6 +31,7 @@ function populateFlags(obj){
 				"<div class=\"modal-content\">" + 
 				"<div class=\"modal-header\">" + 
 					"<h2>" + obj[k].name + "</h2>" + 
+					"<span class=\"close\">&times;</span>" + 
 					"<img class=\"modal-image\" src=" + obj[k].imagelink + ">" + 
 				"</div>" + 
 				"<div class=\"modal-body\">" + 

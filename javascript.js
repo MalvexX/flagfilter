@@ -186,7 +186,9 @@ function showModal(input) {
 	modal.classList.add("modalActive");
 }
 
-window.onclick = function() {
+window.addEventListener("click", closingModal);
+
+function closingModal(event) {
 	let modalActive = document.getElementsByClassName("modalActive");
 	if (event.target == modalActive[0]) {
 		// console.log("Hiding modal");
@@ -194,6 +196,30 @@ window.onclick = function() {
 		modalActive[0].classList.remove("modalActive");
 	}
 }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+console.log(span);
+span[0].addEventListener("click", closingModal);
+
+// // When the user clicks on <span> (x), close the modal
+// span.addEventListener("click", function(event) {
+// 	let modalActive = document.getElementsByClassName("modalActive");
+// 	if (event.target == modalActive[0]) {
+// 		// console.log("Hiding modal");
+// 		modalActive[0].style.display = "none";
+// 		modalActive[0].classList.remove("modalActive");
+// 	}
+// });
+
+// window.onclick = function(event) {
+// 	let modalActive = document.getElementsByClassName("modalActive");
+// 	if (event.target == modalActive[0]) {
+// 		// console.log("Hiding modal");
+// 		modalActive[0].style.display = "none";
+// 		modalActive[0].classList.remove("modalActive");
+// 	}
+// }
 
 // Get the modal
 //var modal = document.getElementsByClassName("myModal")[0];
