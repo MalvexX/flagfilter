@@ -218,22 +218,20 @@ footer a {
 	bottom: 10px;
 	left: 20%;
 	font-family: 'Georgia';
-	/* right: 50%; */
 	/* justify-content: center; */
 	/* margin-left: auto; */
 	/* margin-right: auto; */
 	background-color: #ecf8f8;
-	width: 60%;
-	/* height: 100%; */
+	/* width: 60%; */
+	overflow-y: auto; /* Enable scroll if needed */
+	height: 50%;
 	/* max-width: 600px; */
-	/* -webkit-animation-name: slideIn; */
-	/* -webkit-animation-duration: 0.4s; */
 	animation-name: slideIn;
 	animation-duration: 0.4s;
 }
-/*
+
 .close {
-  color: white;
+  color: rgb(225, 225, 225);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -244,11 +242,10 @@ footer a {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}*/
+}
 
 .modal-header {
 	background-color: #44bbbb;
-	/* display: flex; */
 	position: relative;
 }
 
@@ -257,7 +254,6 @@ footer a {
 	bottom: 0;
 	left: 0;
 	padding: 5px;
-	/* border: solid 2px black; */
 	width: 100%;
 	color: white;
 	font-family: 'Telex';
@@ -323,9 +319,9 @@ footer a {
 /* Modal ends here */
 
 /* For mobile phones */
- /* @media only screen and (max-width: 1080px) {
+ @media only screen and (max-width: 1080px) {
 	.modal-content {
 		left: 10%;
 		width: 80%;
 	}
-} */
+}

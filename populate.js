@@ -29,26 +29,26 @@ function populateFlags(obj){
 
 		modaldiv.innerHTML = 
 				"<div class=\"modal-content\">" + 
-				"<div class=\"modal-header\">" + 
-					"<h2>" + obj[k].name + "</h2>" + 
-					"<span class=\"close\">&times;</span>" + 
-					"<img class=\"modal-image\" src=" + obj[k].imagelink + ">" + 
+					"<div class=\"modal-header\">" + 
+						"<h2>" + obj[k].name + "</h2>" + 
+						"<span class=\"close\">&times;</span>" + 
+						"<img class=\"modal-image\" src=" + obj[k].imagelink + ">" + 
+					"</div>" + 
+					"<div class=\"modal-body\">" + 
+						"<table class=\"modal-table\">" + 
+							"<tr><td>Proportion:</td><td>" + obj[k].proportion + "</td></tr>" + 
+							"<tr><td>Year adopted:</td><td>" + obj[k].adopted + "</td></tr>" + 
+						"</table>" + 
+						"<br>" + 
+						"<p><b>Symbolism:</b></p>" + obj[k].symbolism +
+						"<br>" + 
+						"<p><b>Fun facts:</b></p>" + obj[k].funfacts + 
+					"</div>" + 
+					"<div class=\"modal-footer\">" + 
+						"<a href=" + obj[k].wikipedialink + " target=\"_blank\" rel=\"noopener noreferrer\">" + obj[k].wikipedialink + "</a>" + 
+					"</div>" + 
 				"</div>" + 
-				"<div class=\"modal-body\">" + 
-					"<table class=\"modal-table\">" + 
-						"<tr><td>Proportion:</td><td>" + obj[k].proportion + "</td></tr>" + 
-						"<tr><td>Year adopted:</td><td>" + obj[k].adopted + "</td></tr>" + 
-					"</table>" + 
-					"<br>" + 
-					"<p><b>Symbolism:</b></p>" + obj[k].symbolism +
-					"<br>" + 
-					"<p><b>Fun facts:</b></p>" + obj[k].funfacts + 
-				"</div>" + 
-				"<div class=\"modal-footer\">" + 
-					"<a href=" + obj[k].wikipedialink + " target=\"_blank\" rel=\"noopener noreferrer\">" + obj[k].wikipedialink + "</a>" + 
-				"</div>" + 
-			"</div>" + 
-		"</div>";
+		// "</div>";
 
 		gallery.appendChild(modaldiv);
 	}
