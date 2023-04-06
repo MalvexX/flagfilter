@@ -186,21 +186,39 @@ function showModal(input) {
 	modal.classList.add("modalActive");
 }
 
-window.addEventListener("click", closingModal);
+// window.addEventListener("click", closingModal);
 
-function closingModal(event) {
-	let modalActive = document.getElementsByClassName("modalActive");
-	if (event.target == modalActive[0]) {
-		// console.log("Hiding modal");
-		modalActive[0].style.display = "none";
-		modalActive[0].classList.remove("modalActive");
-	}
+// function closingModal(event) {
+// 	let modalActive = document.getElementsByClassName("modalActive");
+// 	if (event.target == modalActive[0]) {
+// 		// console.log("Hiding modal");
+// 		modalActive[0].style.display = "none";
+// 		modalActive[0].classList.remove("modalActive");
+// 	}
+// }
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close");
+// console.log(span);
+// span[0].addEventListener("click", closingModal);
+
+
+document.addEventListener(
+	"click",
+	function(event){
+		if (
+			event.target.matches(".close") ||
+			!event.target.closest(".modal")
+		){
+			closeModal()
+		}
+	},
+	false
+)
+
+function closeModal() {
+	document.querySelector(".modal").style.display = "none"
 }
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close");
-console.log(span);
-span[0].addEventListener("click", closingModal);
 
 // // When the user clicks on <span> (x), close the modal
 // span.addEventListener("click", function(event) {
