@@ -323,9 +323,9 @@ footer a {
 /* Modal ends here */
 
 /* For mobile phones */
- @media only screen and (max-width: 1080px) {
+ /* @media only screen and (max-width: 1080px) {
 	.modal-content {
 		left: 10%;
 		width: 80%;
 	}
-}
+} */
