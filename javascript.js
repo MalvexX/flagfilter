@@ -179,7 +179,7 @@ function buttonFilter(input) {
 }
 
 function showModal(input) {
-	console.log("showModal input: " + input);
+	// console.log("showModal input: " + input);
 	
 	let modal = document.getElementById(input);
 	modal.style.display = "block";
@@ -203,24 +203,11 @@ function showModal(input) {
 // span[0].addEventListener("click", closingModal);
 
 
-document.addEventListener(
-	"click",
-	function(event){
-		if (
-			event.target.matches(".close") || !event.target.closest(".overlay")
-		){
-			closeModal();
-			// console.log(event.target.closest(".overlay"));
-		}
-	},
-	false
-)
-
 function closeModal() {
 	console.log("closeModal");
 	let modalActive = document.getElementsByClassName("modalActive");
 	// console.log(modalActive.length);
-	
+
 	if (modalActive.length > 0) {
 		document.querySelector(".modalActive").style.display = "none";
 		modalActive[0].classList.remove("modalActive");
@@ -271,6 +258,22 @@ function closeModal() {
 //    modal.style.display = "none";
 //  }
 //}
+
+window.addEventListener("load", (event) => {
+	// console.log("Page is fully loaded");
+
+	document.addEventListener("click", function(event){
+		// console.log(event.target);
+		if (
+			// Triggers to close the modal are either ("||") X button (.close) or outside of the modal.
+			event.target.matches(".close") || event.target.matches(".modalActive")
+		){
+			closeModal();
+			// console.log(event.target);
+		}
+	}, false)
+});
+
 
 function showFlags() {
 	

@@ -19,6 +19,7 @@ function populateFlags(obj){
 		flagdiv.innerHTML = 
 				"<img class=\"image\" src=" + obj[k].imagelink + ">" +
 				"<div class=\"overlay\" onclick=\"showModal('modal_" + obj[k].shortname + "')\">" + obj[k].name + "</div>" +
+				// "<div class=\"overlay\">" + obj[k].name + "</div>" +
 			"</div>";
 		gallery.appendChild(flagdiv);
 
